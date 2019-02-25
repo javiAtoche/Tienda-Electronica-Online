@@ -111,8 +111,9 @@ function _clickBusqueda(){
        window.localStorage.setItem(c_CATEGORIA,document.querySelector("#select-categorias").value);
        window.localStorage.setItem(c_BUSQUEDA,document.querySelector("#input-search").value);
 
-        if(document.URL.includes("consulta.html")){
-            _calculaYMuestraBusqueda(productos,g_sectionConsulta,g_selectNumProdMostradosXPagina.value);
+        if(window.location.href.includes("consulta.html")){
+            // recargar "consulta.html"
+             window.location.reload();
         }else{
             
             // ir a pagina "consulta.html"
@@ -120,9 +121,6 @@ function _clickBusqueda(){
 
         }
    });
-
-    //EVENTO 'CLICK' DEL SELECT MOSTRAR NUM PRODUCTOS POR PAGINA
-    // _clickSelectNumProdPorPag(g_arrayProdFiltrados);
 }
 
 

@@ -66,11 +66,10 @@ window.addEventListener('load',() =>{
 
     // ANYADE PRODUCTOS FILTRADOS POR CONSULTA
     // ACCION CLICK AL BOTON 'SEARCH'
-    _clickBusqueda(productos,g_sectionConsulta,g_selectNumProdMostradosXPagina.value);
+    _clickBusqueda();
 
 
     // REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.HTML'
-    
     _calculaYMuestraBusqueda(g_padreCajaPaginas,g_sectionConsulta, productos,g_selectNumProdMostradosXPagina.value,...g_paginadorTipo1);
 
     // ANYADE PRODUCTOS AL CARRITO O VER DETALLES DEL PRODUCTO
@@ -79,7 +78,7 @@ window.addEventListener('load',() =>{
     // EVENTO 'CLICK' SELECT NUM ELEMENTOS A MOSTRAR
     _clickSelectNumProdMostradosXPagina(g_paginadorConsulta);
 
-    // EVENTO 'CLICK' EN PIE PAGINA
+    // EVENTO 'CLICK' EN PIE PAGINA (EL PAGINADOR TIENE TAMBIÉN ESTE EVENTO PERO ES DISTINTO)
     g_padreCajaPaginas.addEventListener('click',() =>
     {
         // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
@@ -87,10 +86,10 @@ window.addEventListener('load',() =>{
     });
 
     /* ------     ASIDE   ------*/
-    
-    // _clickNovedades(productos,g_sectionConsulta,g_selectNumProdMostradosXPagina.value);
-
-    // _clickMasVendidos(productos,g_sectionConsulta,g_selectNumProdMostradosXPagina.value);
+    // EVENTO 'CLICK' EN NOVEDADES
+    _clickNovedades(productos,g_paginadorConsulta);
+    // EVENTO 'CLICK' EN MAS VENDIDOS
+    _clickMasVendidos(productos,g_paginadorConsulta);
 
 });
 
@@ -98,15 +97,15 @@ window.addEventListener('load',() =>{
 //FUNCIONES
 /*******************************/
 
+/******************************
+********   CABECERA    ********
+*******************************/
 
-/*********************************************
-* SECTION CONSULTA DE PRODUCTOS
-* ********************************************/
-
-/* ---------------------------------------------- */
-/*********************************
-* MUESTRA NUM PRODUCTOS && SELECTs
-* ********************************/
+// FUNCION CARGA DATOS BUSQUEDA ANTERIOR
+function _cargaDatosBusquedaAnterior(){
+    document.querySelector("#select-categorias").value = window.localStorage.getItem(c_CATEGORIA);
+    document.querySelector("#input-search").value = window.localStorage.getItem(c_BUSQUEDA);
+}
 
 // MUESTRA NUMERO DE PRODUCTOS MOSTRADOS / NUMERO DE PRODUCTOS TOTAL EN LA BUSQUEDA
 function _muestraNumProductosMostradosDelTotal(p_spanNumProdMostrados,p_spanNumProdResultantes,p_numProductosDePagina,p_numProductosFiltrados){
@@ -118,65 +117,25 @@ function _muestraNumProductosMostradosDelTotal(p_spanNumProdMostrados,p_spanNumP
 }
 
 
-
-
 // EVENTO 'CLICK' SELECT "MOSTRAR 'X' PRODUCTOS"
 function _clickSelectNumProdMostradosXPagina(p_paginador){
     g_selectNumProdMostradosXPagina.addEventListener('change', (p_evento) =>
     {
-
+        // Almacena el valor del select de 'numero de productos mostrados por pagina'
         let l_selectNumProdMostradosXPaginaValue = p_evento.target.value;
 
         // Actualizar valor del paginador
         p_paginador.setNumElementosXPagina(l_selectNumProdMostradosXPaginaValue);
 
-
-        //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-        // _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-        // calcula el numero de paginas total del paginador
-        // let l_numPagTotal = Math.ceil(p_arrayProdFiltrados.length/l_selectNumProdMostradosXPaginaValue);
-
-        // calcula el array tramo a mostrar en la pagina indidicada
-        // let l_arrayTramo = g_paginadorConsulta.calculaArrayTramo(p_arrayProdFiltrados,1,l_numPagTotal,l_selectNumProdMostradosXPaginaValue);
-
-        // anyade los productos filtrados a la section '#container-prod-consulta'
-        // g_paginadorConsulta.anyadeElementosAPagina(l_arrayTramo,p_nodoPadreDondeMuestraResultado,1,l_numPagTotal,_plantillaElementProdConsulta);
-
         // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
         _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,p_paginador.getArrayTramo().length,p_paginador.getArrayTotal().length);
-
-        // EVENTO 'CLICK' EN EL NUMERO DE PAGINA
-        // g_paginadorConsulta.clickNumPagina(p_arrayProdFiltrados,g_sectionConsulta,l_selectNumProdMostradosXPaginaValue);
-        
-        // EVENTO 'CLICK' EN EL LINK ASIDE DE 'NOVEDADES'
-        // _clickNovedades(p_arrayProdFiltrados,g_sectionConsulta,l_selectNumProdMostradosXPaginaValue);
-
-        // EVENTO 'CLICK' EN EL LINK ASIDE DE 'MAS VENDIDOS'
-        // _clickMasVendidos(p_arrayProdFiltrados,g_sectionConsulta,l_selectNumProdMostradosXPaginaValue);
-
     });
 }
 
- /* ---------------------------------------------- */
 
-
-    /************************
-    *       BUSQUEDA
-    * ***********************/
-
-// FUNCION CARGA DATOS BUSQUEDA ANTERIOR
-function _cargaDatosBusquedaAnterior(){
-    document.querySelector("#select-categorias").value = window.localStorage.getItem(c_CATEGORIA);
-    document.querySelector("#input-search").value = window.localStorage.getItem(c_BUSQUEDA);
-}
-
-// RESETEA LAS VARIABLES DE BUSQUEDA PARA PREPARARLAS PARA LA PROXIMA BUSQUEDA
-// function _resetVariablesBusqueda(){
-//     g_arrayProdFiltrados = [];
-//     // g_array2DPaginado = [];
-// }
-
+/********************************************
+********   MAIN SECCION PRODUCTOS    ********
+*********************************************/
 
 // REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.HTML'
 function _calculaYMuestraBusqueda(p_padreCajaPaginas,p_sectionElementos, p_arrayElementosTotales,p_selectNumProdMostradosXPaginaValue,...p_paginadorTipo1){
@@ -185,34 +144,14 @@ function _calculaYMuestraBusqueda(p_padreCajaPaginas,p_sectionElementos, p_array
         g_valorCategoria = window.localStorage.getItem(c_CATEGORIA);
         g_valorBusqueda = window.localStorage.getItem(c_BUSQUEDA);
 
-        //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-        // _removeChildElementsInDom(p_sectionElementos);
-
-        // resetea las variables que se usan para la busqueda
-        // _resetVariablesBusqueda();
-
         //recupera todos los productos que cumplen el filtro de busqueda
         g_arrayProdFiltrados = _recuperaProductosFiltrados(p_arrayElementosTotales,g_valorCategoria, g_valorBusqueda);
 
-        // calculo numero de paginas totales mediante array.length y el select de productos a mostrar por pagina
-        // let l_numPagTotal = Math.ceil(g_arrayProdFiltrados.length/p_selectNumProdMostradosXPaginaValue);
         // Se crea el paginador con el array filtrado
         g_paginadorConsulta = new Paginador(p_padreCajaPaginas,p_sectionElementos,g_arrayProdFiltrados,p_selectNumProdMostradosXPaginaValue,...p_paginadorTipo1);
-        
-        // calcula el array tramo a mostrar en la pagina indidicada
-        // let l_arrayTramo = g_paginadorConsulta.privateCalculaArrayTramo(g_arrayProdFiltrados,1,l_numPagTotal,p_selectNumProdMostradosXPaginaValue);
-
-        // anyade los productos filtrados a la section '#container-prod-consulta'
-        // g_paginadorConsulta.privateAnyadeElementosAPagina(l_arrayTramo);
 
         // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
         _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,g_paginadorConsulta.getArrayTramo().length,g_paginadorConsulta.getArrayTotal().length);
-
-        // EVENTO 'CLICK'SELECT PAGINA A MOSTRAR
-        // _clickSelectNumProdMostradosXPagina(g_arrayProdFiltrados, p_nodoPadreDondeMuestraResultado);
-
-        // // EVENTO 'CLICK' EN EL NUMERO DE PAGINA
-        // g_paginadorConsulta.clickNumPagina(g_arrayProdFiltrados,g_sectionConsulta,p_selectNumProdMostradosXPaginaValue);
 
 }
 
@@ -232,215 +171,31 @@ function _recuperaProductosFiltrados(p_productos,p_valorCategoria, p_valorBusque
     return l_arrayProdFiltrados;
 }
 
-
-// FUNCION ANYADE PRODUCTOS A UNA PAGINA CONCRETA
-// function _anyadeProductosAPagina(p_arrayProdFiltrados,p_nodoPadre,p_numPagSeleccionada = 1,p_selectNumProdMostradosXPaginaValue = 10){
-
-//     // calcula numero de paginas total segun el array de busqueda filtrado y el numero de productos mostrados por pagina
-//     let l_numPagTotal = Math.ceil(p_arrayProdFiltrados.length/p_selectNumProdMostradosXPaginaValue);
-//     // calcula y devuelve el array con el tramo a mostrar en la pagina
-//     let l_arrayProdXPag = _calculaArrayTramo(p_arrayProdFiltrados,p_numPagSeleccionada,l_numPagTotal,p_selectNumProdMostradosXPaginaValue);
-
-//     for(let l_p of l_arrayProdXPag){
-//         if(l_p != (undefined && null)){
-//             _addElementInDom(p_nodoPadre,_plantillaElementProdConsulta(l_p),c_BEFOREEND);
-//         }
-//     }
-
-//     //PIE PAGINA
-//     g_paginadorConsulta.redibujaPaginador(l_numPagTotal,p_numPagSeleccionada);
-
-//     // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
-//     _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,l_arrayProdXPag.length,p_arrayProdFiltrados.length);
-//  }
-
- 
-/* ---------------------------------------------- */
-/**********************************************
-* PIE NUMERO PAGINAS
-* ********************************************/
-// // EVENTO 'CLICK' EN PIE PAGINA
-// function _eventoClickPiePagina(){
-//     this.getNodoPadrePaginador().addEventListener('click',(p_evento) =>
-//     {
-        
-//     });
-// }
-
-// FUNCION DIBUJA EL PIE DE PAGINA
-// function _dibujaNumPaginas(p_divPaginas,p_numPagTotal){
-//     //limpiamos antes de dibujar
-//     _removeChildElementsInDom(p_divPaginas);
-
-//     // for(let i = 1; i <= p_numPagTotal; i++){
-//     //     _addElementInDom(p_divPaginas,_plantillaElementPiePag(i),c_BEFOREEND);
-//     // }
-//  }
-
-
-// EVENTO 'CLICK' EN EL NUMERO DE PAGINA
-// function _clickNumPagina(p_arrayProdFiltrados, p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue){
-
-//     // click en paginas 1..2..3..
-//     g_padrePaginadorProductos.addEventListener('click',(p_evento) =>
-//     {
-        
-//         let l_numPulsadoChar = p_evento.target.getAttribute("pagina");
-//         let l_numPulsado = Number.parseInt(l_numPulsadoChar);
-//         if(p_evento.target.nodeName == "A"){
-
-//             if(!Number.isNaN(l_numPulsado)){
-  
-//                 // actualizamos el valor de pagina actual = una pagina menos a la actual
-//                 g_paginadorConsulta.setNumPagActual(l_numPulsado);
-
-//                 //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-//                 _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-//                 // muestra la pagina especifica con sus productos
-//                 _anyadeProductosAPagina(p_arrayProdFiltrados,p_nodoPadreDondeMuestraResultado,g_paginadorConsulta.getNumPagActual(),p_selectNumProdMostradosXPaginaValue);
-
-//             }
-            
-//         }else if(p_evento.target.nodeName == "I"){
-//             l_numPulsadoChar = p_evento.target.parentNode.getAttribute("pagina");
-//             if(l_numPulsadoChar == 'pagina-anterior'){
-//                 // Si nos encontramos en una pagina mayor a la 1
-//                 if(g_paginadorConsulta.getNumPagActual() > 1){
-
-//                     // actualizamos el valor de pagina actual = una pagina menos a la actual
-//                     g_paginadorConsulta.setNumPagActual(g_paginadorConsulta.getNumPagActual()-1);
-
-//                     //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-//                     _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-//                     // muestra la pagina especifica con sus productos
-//                     _anyadeProductosAPagina(p_arrayProdFiltrados,p_nodoPadreDondeMuestraResultado,g_paginadorConsulta.getNumPagActual(),p_selectNumProdMostradosXPaginaValue);
-
-//                 }
-//             }else if(l_numPulsadoChar == 'pagina-siguiente'){
-//                 if(g_paginadorConsulta.getNumPagActual() < g_paginadorConsulta.getNumTotalPag()){
-
-//                     // actualizamos el valor de pagina actual = una pagina menos a la actual
-//                     g_paginadorConsulta.setNumPagActual(g_paginadorConsulta.getNumPagActual() + 1);
-        
-//                     //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-//                     _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-//                     // muestra la pagina especifica con sus productos
-//                     _anyadeProductosAPagina(p_arrayProdFiltrados,p_nodoPadreDondeMuestraResultado,g_paginadorConsulta.getNumPagActual(),p_selectNumProdMostradosXPaginaValue);
-
-//                 }
-//             }
-//         }
-//     });
-// }
-
-// muestra los productos de la pagina especificada en el click
-// function _muestraPagEspecifica(p_arrayProdAMostrar,p_sectionConsulta,p_numPagActiva){
-    
-
-//     //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-//     _removeChildElementsInDom(p_sectionConsulta);
-    
-//     // anyade los productos filtrados a la section '#container-prod-consulta'
-//     _anyadeProductosAPagina(p_arrayProdAMostrar,p_sectionConsulta);
-   
-
-//     //colorea pagina actual
-//     _coloreaPagActualyNoLasDemas(g_paginadorConsulta.getNodoPadre(), p_numPagActiva);
-// }
-
-
-
-
-
 /* ---------------------------------------------- */
 /**********************************************
 * -------   ASIDE   -------
 * ********************************************/
 
-function _clickNovedades(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue){
+function _clickNovedades(p_productos,p_paginador){
 
     g_asideNovedades.addEventListener('click', () => 
     {
-        _muestraNovedades(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue);
+        // modifica el array del paginador para que muestre las novedades
+        p_paginador.setArrayTotal(_muestraNovedades(p_productos,8));
+        // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
+        _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,p_paginador.getArrayTramo().length,p_paginador.getArrayTotal().length);
     });
-    
 }
 
-function _muestraNovedades(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue){
-
-    //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-    _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-    // obtiene los 10 ultimos productos anyadidos en el objeto productos del archivo JSON
-    let l_numNovedades = 5;
-    let l_arrayNovedadesAux = []
-    for(let i = l_numNovedades; i > 0 ; i--){
-        // guardamos los ultimos 10 elementos
-        l_arrayNovedadesAux.push(p_productos[p_productos.length - i]);
-    }
-
-    // calcula el numero de paginas total del paginador
-    let l_numPagTotal = Math.ceil(l_arrayNovedadesAux.length/p_selectNumProdMostradosXPaginaValue);
-
-    // anyade los productos filtrados a la section '#container-prod-consulta'
-    g_paginadorConsulta.anyadeElementosAPagina(l_arrayNovedadesAux,p_nodoPadreDondeMuestraResultado,1,l_numPagTotal,_plantillaElementProdConsulta);
-    
-    // calcula la cantidad de productos mostrados por pagina en novedades, respecto del total que seria 'l_arrayNovedadesAux.length'
-    let l_arrayNovedadesAuxLength = (l_arrayNovedadesAux.length > p_selectNumProdMostradosXPaginaValue) ? p_selectNumProdMostradosXPaginaValue : l_arrayNovedadesAux.length;
-
-    // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
-    _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,l_arrayNovedadesAuxLength,l_arrayNovedadesAux.length);
-
-    // EVENTO 'CLICK'SELECT PAGINA A MOSTRAR
-    _clickSelectNumProdMostradosXPagina(l_arrayNovedadesAux,p_nodoPadreDondeMuestraResultado);
-
-    // EVENTO 'CLICK' EN EL NUMERO DE PAGINA
-    g_paginadorConsulta.clickNumPagina(l_arrayNovedadesAux,g_sectionConsulta,p_selectNumProdMostradosXPaginaValue);
-
-}
-
-function _clickMasVendidos(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue){
+function _clickMasVendidos(p_productos,p_paginador){
     g_asideMasVendidos.addEventListener('click', () =>
     {
-        _muestraMasVendidos(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue);
+        // modifica el array del paginador para que muestre los productos mas vendidos
+        p_paginador.setArrayTotal(_muestraMasVendidos(p_productos,8));
+        // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
+        _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,p_paginador.getArrayTramo().length,p_paginador.getArrayTotal().length);
     });
 }
-
-function _muestraMasVendidos(p_productos,p_nodoPadreDondeMuestraResultado,p_selectNumProdMostradosXPaginaValue){
-
-    //limpiamos la pagina antes de mostrar el resultado, si no, se acumularan los productos de otras busquedas
-    _removeChildElementsInDom(p_nodoPadreDondeMuestraResultado);
-
-    // calcula los 10 productos mas vendidos comparando la propiedad 'ventas' de cada producto del JSON
-    let l_arrayMasVendidosAux = [];
-    let l_numMasVendidos = 15;
-    let l_arrayOrdenVentasDesc = _ordenaVentasDescendentes(p_productos);
-    for(let i = 0; i < l_numMasVendidos; i++){
-        l_arrayMasVendidosAux.push(l_arrayOrdenVentasDesc[i]);
-    }
-
-    // calcula el numero de paginas total del paginador
-    let l_numPagTotal = Math.ceil(l_arrayMasVendidosAux.length/p_selectNumProdMostradosXPaginaValue);
-    
-    // anyade los productos filtrados a la section '#container-prod-consulta'
-    g_paginadorConsulta.anyadeElementosAPagina(l_arrayMasVendidosAux,p_nodoPadreDondeMuestraResultado,1,l_numPagTotal,_plantillaElementProdConsulta);
-
-
-    // calcula la cantidad de productos mostrados por pagina en novedades, respecto del total que seria 'l_arrayMasVendidosAux.length'
-    let l_arrayMasVendidosAuxLength = (l_arrayMasVendidosAux.length > p_selectNumProdMostradosXPaginaValue) ? p_selectNumProdMostradosXPaginaValue : l_arrayMasVendidosAux.length;
-
-    // refresca la informacion del numero de productos mostrado por pagina y del total de productos mostrados que han pasado el filtro
-    _muestraNumProductosMostradosDelTotal(g_spanNumProdMostrados,g_spanNumProdResultantes,l_arrayMasVendidosAuxLength,l_arrayMasVendidosAux.length);
-
-    // EVENTO 'CLICK' EN EL NUMERO DE PAGINA
-    g_paginadorConsulta.clickNumPagina(l_arrayMasVendidosAux,g_sectionConsulta,p_selectNumProdMostradosXPaginaValue);
-
-}
-
-
 
 
 /* ---------------------------------------------- */
@@ -504,33 +259,4 @@ function _plantillaElementProdConsulta(p_prodConsulta){
     `;
 
     return l_plantillaProdConsulta;
-}
-
-
-
-
-// PLANTILLA DE PIE CON PAGINAS
-function _plantillaElementPiePag(p_numPag){
-    let l_plantillaPiePag = 1;
-    if(p_numPag == 1){
-        l_plantillaPiePag = 
-        `
-            <a href="#" pagina="${p_numPag}" class="mx-1 activeNumPage">
-                ${p_numPag}
-            </a>
-    
-        `;
-    }else{
-        l_plantillaPiePag = 
-        `
-            <a href="#" pagina="${p_numPag}" class="mx-1">
-                ${p_numPag}
-            </a>
-    
-        `;
-    }
-   
-    return l_plantillaPiePag;
-
-
 }

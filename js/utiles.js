@@ -23,6 +23,9 @@ function _removeChildElementsInDom(p_padre){
     p_padre.innerHTML = "";
 }
 
+/********************/
+/***   BUSQUEDA   ***/
+/********************/
 
 // FUNCION BUSCAR PRODUCTO: funcion que busca un producto por su codigo en el fichero JSON y lo devuelve
 function _buscarProductoXCodigo(p_codProd){
@@ -56,6 +59,27 @@ function _filtraProductosXCategoria(p_prodConsulta,p_valorSelectCateg, p_valorIn
     }
 
     return l_productoFiltrado;
+}
+
+
+// FUNCION FILTRA NOVEDADES: Funcion que muestra los ultimos X elementos de un array dado
+function _muestraNovedades(p_productos,p_cantidadNovedades){
+    
+    let l_arrayNovedadesAux = []
+    for(let i = p_cantidadNovedades; i > 0 ; i--){
+        // guardamos los ultimos X elementos
+        l_arrayNovedadesAux.push(p_productos[p_productos.length - i]);
+    }
+    return l_arrayNovedadesAux;
+}
+// FUNCION FILTRA MAS VENDIDOS: Funcion que muestra los X elementos mas vendidos de un array dado
+function _muestraMasVendidos(p_productos,p_cantidadMasVendidos){
+    let l_arrayMasVendidosAux = [];
+    let l_arrayOrdenVentasDesc = _ordenaVentasDescendentes(p_productos);
+    for(let i = 0; i < p_cantidadMasVendidos; i++){
+        l_arrayMasVendidosAux.push(l_arrayOrdenVentasDesc[i]);
+    }
+    return l_arrayMasVendidosAux;
 }
 
 
@@ -97,116 +121,189 @@ function _ordenaVentasDescendentes(p_arrayOrigen){
 /************************/
 /****   PIE PAGINA   ****/
 /************************/
-// Funcion COLOREA numero de pagina activa y DESCOLOREA el resto
-function _coloreaPagActualyNoLasDemas(p_nodoPadreNumPaginas, p_numPagActiva){
-    for(let l_child of p_nodoPadreNumPaginas.children){
-        if(l_child.getAttribute("pagina") == p_numPagActiva){
-            l_child.classList.add(this.getCssClassActiveNumPag());
-        }else{
-            l_child.classList.remove(this.getCssClassActiveNumPag());
-        }
-    }
+
+
+
+
+
+/**************************/
+/****   VALIDACIONES   ****/
+/**************************/
+
+// -- FUNCIONES 'ES' --
+function _esNoNull(p_parametro){
+    return (p_parametro !== null);
 }
 
-// Funcion que calcula el tramo del array que queremos visualizar segun la pagina actual en la que estemos
-function _calculaArrayTramo(p_array,p_numPagPedida,p_numPagTotal,p_numElemXPag){
+function _esNoUndefined(p_parametro){
+    return (p_parametro !== undefined);
+}
+
+function _esNoNullNoUndefined(p_parametro){
+    return (_esNoNull(p_parametro) && _esNoUndefined(p_parametro) );
+}
+
+function _esNumero(p_numero){
+    return !Number.isNaN(p_numero);
+}
+
+function _esNumeroMayorQueCero(p_numero){
+    
+    return ( _esNumero(p_numero) && (p_numero > 0) );
+}
+
+function _esNumeroMayorIgualQue(p_numero,p_numero2){
+    
+    return ( _esNumero(p_numero) && _esNumero(p_numero2) && (p_numero >= p_numero2) );
+}
+
+function _esNumeroEntero(p_numeroEntero){
+    return (Number.isInteger(p_numeroEntero));
+}
+
+function _esNumeroDecimal(p_numeroDecimal){
+    return (!Number.isInteger(p_numeroDecimal));
+}
+
+function _esCadena(p_cadena){
+    return ( (typeof p_cadena == 'string') || (p_cadena instanceof String) );
+}
+
+function _esCadenaNoVacia(p_cadena){
+    return (_esCadena(p_cadena) && p_cadena.length > 0);
+}
+
+function _esArray(p_array){
+    return ( (typeof p_array == "object") || (p_array instanceof Array) );
+}
+
+function _esArrayNoVacio(p_array){
+    return ( (_esArray(p_array)) && (p_array.length > 0) );
+}
+
+function _esPosicionInsertAdjacentHTML(p_posicion){
+   return ( p_posicion.includes("beforebegin")  || p_posicion.includes("beforeend") || p_posicion.includes("afterbegin") || p_posicion.includes("afterend") );
+}
+
+// -- FUNCIONES 'VALIDA' --
+
+function _validaNoNullNoUndefined(p_parametro){
     try {
-        // variables para el problema
-        let l_arrayAuxTramo = [];
-        let l_indiceInicio;
-        let l_indiceFin;
-        // variables auxiliares
-        let l_numPagPedidaAux = Number.parseInt(p_numPagPedida);
-        let l_numElemXPagAux = Number.parseInt(p_numElemXPag)
-        let l_numPagTotalAux = Number.parseInt(p_numPagTotal);
-
-        if(Number.isNaN(l_numPagPedidaAux) || Number.isNaN(l_numElemXPagAux) || Number.isNaN(l_numPagTotalAux)){
-            throw ('Error, La(s) variable(s) pasada(s) por parámetro, p_numPagActual o p_numItemsXPag, no es (no son) un número');
+        if(_esNoNullNoUndefined(p_parametro)){
+            return true;
         }else{
-            if(l_numPagPedidaAux < 1){
-                l_indiceInicio = 0;
-                l_indiceFin = l_numElemXPagAux-1;
-            }else if(l_numPagPedidaAux > l_numPagTotalAux){
-                l_indiceInicio = (l_numPagTotalAux*l_numElemXPagAux)-l_numElemXPagAux;
-                l_indiceFin = p_array.length-1;
-            }else{
-                l_indiceInicio = (l_numPagPedidaAux*l_numElemXPagAux)-l_numElemXPagAux;
-                l_indiceFin = (l_numPagPedidaAux*l_numElemXPagAux)-1;
-            }
-            // Actualizamos el valor de la página actual
-            // this.setNumPagActual(l_numPagActualAux);
-
-            // Actualiza numero total de paginas a mostrar
-            // this.setNumTotalPag(this.getArrayElemTotales().length/this.getElementosXPagina());
-
-            // Trozo de array que cumple el tramo
-            l_arrayAuxTramo = p_array.slice(l_indiceInicio,l_indiceFin+1);
-            // this.setArrayElemTotales(l_arrayAuxTramo);
-            
-            return l_arrayAuxTramo;
+            throw 'El parámetro de entrada es "null" o es "undefined". Parámetro: '+p_parametro;
         }
-        
-
     } catch (error) {
-        console.log('TCL: calculaTramo }catch -> error:', error)
+		console.log('TCL: _validaNoNullNoUndefined }catch -> error:', error);
     }
 }
 
+function _validaNumero(p_numero){
+    try {
+        if(_esNumero(p_numero)){
+            return true;
+        }else{
+            throw 'El parámetro de entrada no es un número. Parámetro: ' + p_numero;
+        }
+    } catch (error) {
+		console.log('TCL: _validaNumero }catch -> error:', error);
+    }
+}
 
+function _validaNumeroMayorQueCero(p_numero){
 
+    try {
+        if( _esNumeroMayorQueCero(p_numero) ){
+            return true;
+        }else{
+            throw 'El parámetro de entrada debe ser un número mayor que cero. parámetro 1: ' + p_numero + ' ,parámetro 2: ' + p_numero2;
+        }
+    } catch (error) {
+		console.log('TCL: _validaNumeroMayorQueCero }catch -> error:', error);
+    }
+}
 
+function _validaNumeroMayorQue(p_numero, p_numero2){
 
+    try {
+        if( _esNumeroMayorIgualQue(p_numero,p_numero2) ){
+            return true;
+        }else{
+            throw 'El parámetro 2: ' + p_numero2 + ' no es mayor que el parámetro 1: ' + p_numero;
+        }
+    } catch (error) {
+		console.log('TCL: _validaNumeroMayorQue }catch -> error:', error);
+    }
+}
 
+function _validaNumeroEntero(p_numeroEntero){
+    try {
+        if(_esNumeroEntero(p_numeroEntero)){
+            return true;
+        }else{
+            throw 'El número pasado como parámetro no es un número entero';
+        }
+    } catch (error) {
+		console.log('TCL: _validaNumeroEntero }catch -> error:', error)
+    }
+}
 
+function _validaNumeroDecimal(p_numeroDecimal){
+    try {
+        if(_esNumeroDecimal(p_numeroDecimal)){
+            return true;
+        }else{
+            throw 'El número pasado como parámetro no es un número decimal';
+        }
+    } catch (error) {
+		console.log('TCL: _validaNumeroDecimal }catch -> error:', error)
+    }
+}
+function _validaCadena(p_cadena){
+    try {
+        if(_esCadena(p_cadena)){
+            return true;
+        }else{
+            throw 'El parámetro de entrada no es una cadena. Parámetro: '+ p_cadena;
+        }
+    } catch (error) {
+		console.log('TCL: _validaCadena }catch -> error:', error);
+    }
+}
 
+function _validaCadenaNoVacia(p_cadena){
+    try {
+        if(_esCadenaNoVacia(p_cadena)){
+            return true;
+        }else{
+            throw 'El parámetro de entrada no es una cadena o es una cadena vacía. Parámetro: '+ p_cadena;
+        }
+    } catch (error) {
+		console.log('TCL: _validaCadenaNoVacia }catch -> error:', error);
+    }
+}
 
+function _validaArray(p_array){
+    try {
+        if(_esArrayNoVacio(p_array)){
+            return true;
+        }else{
+            throw 'El parámetro de entrada no es un array o es un array vacío. Parámetro: '+p_array;
+        }
+    } catch (error) {
+		console.log('TCL: _validaArray }catch -> error:', error);
+    }
+}
 
-// <!-- PRODUCTO 1 -->
-// <article class="col-12 d-flex flex-column flex-md-row align-items-center p-0 bg-grisSecondaryExtraSoft py-2 border-bottom border-secondary">
-// <!-- IMAGEN de producto -->
-// <div class="col-12 col-md-3 d-flex justify-content-center align-items-center p-2 bg-grisSecondaryExtraSoft">
-// <img src="${p_prodConsulta.imagenURL}" alt="${p_prodConsulta.nombre}" class="img-fit roundedPorcentaje-100">
-// </div>
-// <!-- .IMAGEN de producto -->
-
-// <!-- DESCRIPCION producto -->
-// <div class="col-12 col-md-9 p-3 d-flex flex-column  bg-grisSecondaryExtraSoft">
-
-//     <!-- titulo producto -->
-//     <div class=" p-1 text-wrap" title="${p_prodConsulta.nombre}">
-//         <h5 class="" > <a href="#" class="">${p_prodConsulta.nombre}</a> </h5>
-//     </div>
-//     <!-- .titulo producto -->
-
-//     <!-- descripcion producto -->
-//     <div class="overflow-hidden shadow-sm bg-white roundedRem-10 p-2">
-//         <p class="m-0 h-5rem" title="${p_prodConsulta.descripcionCorta}">${p_prodConsulta.descripcionCorta}</p>
-//     </div>
-//     <!-- .descripcion producto -->
-
-//     <!-- 3 PRECIO, ANYADIR CARRITO, VER DETALLE -->
-//     <div class="col-12 d-flex flex-wrap align-items-center p-1 pt-2">
-//         <!-- PRECIO -->
-//         <div class="col-12 order-0 col-md-4 order-md-1 d-flex justify-content-center align-items-center p-2">
-//             <p class="precio-producto font-size-12  border-2px-rojoDanger roundedRem-50 m-0 p-2">${p_prodConsulta.precio.toFixed(2)} €</p>
-//         </div>
-
-//         <!-- ANYADIR a CARRITO -->
-//         <div id="${p_prodConsulta.codigo}" class="col-6 order-1 d-flex flex-column col-md-4 order-md-0 flex-md-row justify-content-center align-items-center cursor-pointer p-2">
-//             <i datos="${c_DATOS_ANYADIRACARRITO}" codigo_producto="${p_prodConsulta.codigo}" class="fas fa-cart-plus font-size-15 font-size-md-20 text-danger p-1"></i>
-//             <p datos="${c_DATOS_ANYADIRACARRITO}" codigo_producto="${p_prodConsulta.codigo}" class="text-center text-md-left text-white border-letter-danger m-0 p-1">Añadir a carrito</p>
-//         </div>
-
-//         <!-- VER DETALLE PRODUCTO -->
-//         <div id="ver-detalle-prod-hover" class="col-6 order-2 d-flex flex-column col-md-4 flex-md-row justify-content-center align-items-center cursor-pointer p-2">
-//             <i datos="${c_DATOS_VERDETALLEPRODUCTO}" codigo_producto="${p_prodConsulta.codigo}" class="fas fa-info-circle font-size-15 font-size-md-20 text-warning p-1"></i>
-//             <p datos="${c_DATOS_VERDETALLEPRODUCTO}" codigo_producto="${p_prodConsulta.codigo}" class="text-center text-md-left text-white border-letter-warning m-0 p-1">Ver detalle</p>
-//         </div>
-//     </div>
-//     <!-- .3 PRECIO, ANYADIR CARRITO, VER DETALLE -->
-
-// </div>
-// <!-- .DESCRIPCION producto -->
-
-// </article>
-// <!-- .PRODUCTO 1 -->
+function _validaPosicionInsertAdjacentHTML(p_posicion){
+    try {
+        if(_esPosicionInsertAdjacentHTML(p_posicion)){
+            return true;
+        }else{
+            throw 'La posicion de inserción pasada como parámetro no es válida, debe ser: "beforebegin", "beforeend", "afterbegin", "afterend". Parámetro: ' + p_posicion;
+        }
+    } catch (error) {
+		console.log('TCL: _validaPosicionInsertAdjacentHTML }catch -> error:', error);
+    }
+}
