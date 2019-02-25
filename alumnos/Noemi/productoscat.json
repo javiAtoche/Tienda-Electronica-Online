@@ -1,0 +1,65 @@
+productos = [
+    {
+        "codigo": 1,
+        "nombre": "Lampara techo",
+        "precio": 20,
+       "descripcion":"lampara techo",
+        "imagenUrl": "imagenes/producto1.jpg",
+    },
+
+    {
+        "codigo": 2,
+        "nombre": "Lampara techo",
+        "precio": 35,
+        "descripcion":"lampara techo",
+        "imagenUrl": "imagenes/producto2.jpg",
+
+
+    },
+    {
+        "codigo": 3,
+        "nombre": "Lampara de pie",
+        "precio": 60,
+        "descripcion":"lampara pie",
+        "imagenUrl": "imagenes/producto3.jpg",
+    },
+    {
+        "codigo": 4,
+        "nombre": "Lampara techo",
+        "precio": 45,
+        "descripcion":"lampara techo",
+        "imagenUrl": "imagenes/producto4.jpg",
+    },
+
+    {
+        "codigo": 5,
+        "nombre": "Lampara techo",
+        "precio": 20,
+        "descripcion":"lampara techo",
+        "imagenUrl": "imagenes/producto5.jpg",
+    },
+
+    {
+        "codigo": 6,
+        "nombre": "Araña",
+        "precio": 100,
+        "descripcion":"araña",
+        "imagenUrl": "imagenes/producto6.jpg",
+    },
+   {
+
+    "codigo": 7,
+        "nombre": "Candelabro",
+        "precio": 85,
+        "descripcion":"candelabro",
+        "imagenUrl": "imagenes/producto7.jpg",
+   },
+
+   {
+    "codigo": 8,
+    "nombre": "Centro",
+    "precio": 85,
+    "descripcion":"centro candelabro",
+    "imagenUrl": "imagenes/producto8.jpg"
+   }
+]

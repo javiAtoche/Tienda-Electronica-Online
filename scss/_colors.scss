@@ -1,0 +1,152 @@
+//COLORS
+
+// colores
+$azulPrimary: #007bff;
+$azulElectronBlue: #0984e3;
+$azulBelizeHole: #2980b9;
+$azulMidnightBlue: #2c3e50;
+$azulDeepKoamaru: #30336b;
+$azulCoastalBreeze: #dff9fb;
+$amarilloWarning: #ffc107;
+$amarilloBeekeeper: #f6e58d;
+$amarilloRosyHighlight: #f7d794;
+$rojoDanger: #dc3545;
+$rojoPomeGranate: #c0392b;
+$verdeSuccess: #28a745;
+$naranja: #fd7e14;
+$naranjaCreamyPeach: #f3a683;
+$naranjaFirstDate: #fab1a0;
+$light: #f8f9fa;
+$dark: #343a40;
+$grisSoaringEagle: #95afc0;
+$grisSecondary: #6c757d;
+$grisWizardGrey: #535c68;
+
+
+
+
+// color para :hover de elementos
+$azulPrimaryHover: #9fcdff;
+$amarilloWarningHover: #f6de95;
+$rojoDangerHover: #e77480;
+$naranjaHover: #feae6d;
+$darkHover: #848f9b;
+$grisSecondaryHover: #a0a7ad;
+$grisSecondaryExtraSoft: #e8e8e8;
+
+@mixin bg-colors(){
+
+    .bg-grisSecondaryHover{
+        background-color:  $grisSecondaryHover;
+    }
+
+    .bg-azulPrimaryHover{
+        background-color:  $azulPrimaryHover;
+    }
+
+    .bg-grisSecondaryExtraSoft{
+        background-color:  $grisSecondaryExtraSoft;
+    }
+
+    .bg-azulCoastalBreeze{
+        background-color:  $azulCoastalBreeze;
+    }
+    
+    .bg-amarilloBeekeeper{
+        background-color:  $amarilloBeekeeper;
+    }
+
+    .bg-amarilloRosyHighlight{
+        background-color:  $amarilloRosyHighlight;
+    }
+
+    .bg-naranjaCreamyPeach{
+        background-color:  $naranjaCreamyPeach;
+    }
+
+    .bg-naranjaFirstDate{
+        background-color:  $naranjaFirstDate;
+    }
+
+    .bg-dark{
+        background-color: $dark;
+    }
+
+    
+
+}
+
+@mixin text-colors() {
+    // rojo
+    .text-rojoDanger{
+        color: $rojoDanger !important;
+    }
+
+    .text-rojoPomeGranate{
+        color: $rojoPomeGranate !important;
+    }
+
+    // azul
+    .text-azulPrimary{
+        color: $azulPrimary !important;
+    }
+
+    .text-azulElectronBlue{
+        color: $azulElectronBlue !important;
+    }
+
+    .text-azulDeepKoamaru{
+        color: $azulDeepKoamaru !important;
+    }
+
+    // verde
+    .text-verdeSuccess{
+        color: $verdeSuccess !important;
+    }
+
+    // amarillo
+    .text-amarilloWarning{
+        color: $amarilloWarning !important;
+    }
+
+    // naranja
+    .text-naranja{
+        color: $naranja !important;
+    }
+
+    .text-naranjaCreamyPeach{
+        color: $naranjaCreamyPeach !important;
+    }
+
+    // gris
+    .text-grisSecondary{
+        color: $grisSecondary !important;
+    }
+
+    .text-grisWizardGrey{
+        color: $grisWizardGrey !important;
+    }
+
+    .text-grisSoaringEagle{
+        color: $grisSoaringEagle !important;
+    }
+
+    // blanco
+    .text-light{
+        color: $light !important;
+    }
+    
+    // negro
+    .text-dark{
+        color: $dark !important;
+    }
+}
+
+@include bg-colors();
+@include text-colors();
+
+
+//EXPORTAR A JS
+// :export {
+//     rojoDanger: $rojoDanger;
+// }

@@ -1,0 +1,492 @@
+
+productos = [
+    {       
+        "codigo": 1,
+        "nombre": "violin",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/1_violin.jpg",
+        "cantidad": 7
+    },
+
+    { 
+        "codigo": 2,
+        "nombre": "acordeon",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/2_acordeon.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 3,
+        "nombre": "bateria",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/3_bateria.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 4,
+        "nombre": "bongo",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/4_bongo.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 5,
+        "nombre": "saxofon",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/5_saxofon.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 6,
+        "nombre": "tuba",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/6_tuba.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 7,
+        "nombre": "piano",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/7_piano.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 8,
+        "nombre": "xilofono",
+        "precio": 20, 
+        "descripción":"" ,
+        "imagenUrl":"img/8_xilofono.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "codigo": 1,
+        "nombre": "Taladro",
+        "precio": 20,
+        "descripcion":"Taladro inalambrico" ,
+        "imagenURL": "img/taladro.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 2,
+        "nombre": "Sierra Circular",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/circulo.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 3,
+        "nombre": "Clavos",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/clavos.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 4,
+        "nombre": "Destornillador",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/destornillador.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 5,
+        "nombre": "Hacha",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/Hacha.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 6,
+        "nombre": "Martillo",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/martillo.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 7,
+        "nombre": "Serrucho",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/serrucho.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 8,
+        "nombre": "Sierra",
+        "precio": 20,
+        "descripcion":"" ,
+        "imagenURL": "img/sierra.jpg",
+        "cantidad": 10
+    },
+
+    {
+        "codigo":"1",
+        "nombre":"PC-Sobremesa",
+        "precio":" 300 €",
+        "descripcion":"DELL PC-03",
+        "imagenUrl":"img/p01.jpg"
+       },
+       
+       {
+        "codigo":"2",
+        "nombre":"Monitores",
+        "precio":" 120 €",
+        "descripcion":"LG-24S 24",
+        "imagenUrl":"img/p02.png"
+    },
+       
+    {
+        "codigo":"3",
+        "nombre":"Portatiles",
+        "precio":" 499 €",
+        "descripcion":"Lenovo X35",
+        "imagenUrl":"img/p03.png"
+    },  
+       
+    {
+        "codigo":"4",
+        "nombre":"Teclados",
+        "precio":" 25 €",
+        "descripcion":"Logitech",
+        "imagenUrl":"img/p04.jpg"
+    },   
+       
+    {
+        "codigo":"5",
+        "nombre":"Ratones",
+        "precio":" 8 €",
+        "descripcion":"Logitech",
+        "imagenUrl":"img/p05.jpg"
+    },
+    
+    {
+        "codigo":"6",
+        "nombre":"Impresoras",
+        "precio":" 85 €",
+        "descripcion":"HP Desjek H-6",
+        "imagenUrl":"img/p06.png"
+    },
+    
+    {
+        "codigo":"7",
+        "nombre":"Tablets",
+        "precio":" 20 €",
+        "descripcion":"SAMSUNG",
+        "imagenUrl":"img/p07.png"
+    },
+    
+    {
+        "codigo":"8",
+        "nombre":"Auriculares",
+        "precio":" 40 €",
+        "descripcion":"Onkyo",
+        "imagenUrl":"img/p08.png"
+    },
+
+    {
+        "codigo": 1,
+        "nombre": "iPhone 7",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto1.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 2,
+        "nombre": "iPhone 8",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto2.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 3,
+        "nombre": "iPhone 9",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto3.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 4,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto4.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 5,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto5.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 6,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto6.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 7,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto7.jpg",
+        "cantidad": 10
+    },
+    {
+        "codigo": 8,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"" ,
+        "imagenURL": "img/productos/producto8.jpg",
+        "cantidad": 10
+    },
+    //1
+    {
+        "codigo": 1,
+        "nombre": "Chocolate",
+        "descripcion":"",
+        "Types":"", 
+        "precio": "10€",
+        //imagen leída desde HTML, no es necesaria ruta ../
+        "imagenUrl": "img/Wonka-Bar.jpg",
+    },
+    //2
+    {
+        "codigo": 2,
+        "nombre": "Candy",
+        "descripcion":"",
+        "Types":"", 
+        "precio": "0.5€",
+        "imagenUrl": "img/candy1.jpg",
+    },
+    //3
+    {
+        "codigo": 3,
+        "nombre": "Jawbreakers",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 3,
+        "imagenUrl": "img/candy2.jpg",
+    },
+    //4
+    {
+        "codigo": 4,
+        "nombre": "Orange Lollipop",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 8,
+        "imagenUrl": "img/lol3.jpg",
+    },
+    //5
+    {
+        "codigo": 5,
+        "nombre": "Strawberry Lollipop",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 8,
+        "imagenUrl": "img/lol2.jpg",
+    },
+    //6
+    {
+        "codigo": 6,
+        "nombre": "Red Liquorice",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 0.2,
+        "imagenUrl": "img/liq.jpg",
+    },
+    //7
+    {
+        "codigo": 7,
+        "nombre": "Dark Liquorice",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 0.2,
+        "imagenUrl": "img/liqn.jpg",
+    },
+    //8
+    {
+        "codigo": 8,
+        "nombre": "Chewing Gum",
+        "descripcion":"",
+        "Types":"", 
+        "precio": 0.2,
+        "imagenUrl": "img/gum.png",
+    },
+    {
+        "codigo": 1,
+        "nombre": "El coleccionista de huesos",
+        "descripcion":"",
+        "precio":11,
+        "imagenUrl":"img/el-coleccionista-de-huesos-2.jpg",
+        "cantidad":30
+    },
+
+    {  "codigo": 2,
+        "nombre": "El guardián entre el centeno",
+        "descripcion":"",
+        "precio":10,
+        "imagenUrl":"img/el-guardian-entre-el-centeno.jpg",
+        "cantidad":40
+    },
+
+    {  "codigo": 3,
+        "nombre": "La última hoguera",
+        "descripcion":"",
+        "precio":20,
+        "imagenUrl":"img/la-ultima-hoguera.jpg",
+        "cantidad":70
+    },
+    {
+        "codigo": 4,
+        "nombre": "Violín negro en Orquesta Roja",
+        "descripcion":"",
+        "precio":21,
+        "imagenUrl":"img/orquesta-roja.jpg",
+        "cantidad":60 
+    },
+
+    {
+        "codigo": 5,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":6,
+        "imagenUrl":"img/legiones-malditas.jpg",
+        "cantidad":40, 
+    },
+
+    {
+        "codigo": 6,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":10,
+        "imagenUrl":"img/vestida-blanco.jpg",
+        "cantidad":30,
+    },
+
+    {
+        "codigo": 7,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":60,
+        "imagenUrl":"img/juegos-hambre.jpg",
+        "cantidad":50,
+    },
+
+    {
+        "codigo": 8,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":19,
+        "imagenUrl":"img/traicion.jpg",
+        "cantidad":30,
+    },
+
+    {
+        "codigo": 1,
+        "nombre": "POTTER Y LA PIEDRA FILOSOFAL",
+        "precio": 7.00, 
+        "autor":"J.K. ROWLING",
+        "imagenUrl":"img/harry1.jpg",
+        "cantidad": 7
+    },
+
+    {   "codigo": 2,
+        "nombre": "HARRY POTTER Y LA CAMARA SECRETA",
+        "precio": 9.00, 
+        "autor":"J.K. ROWLING",
+        "imagenUrl":"img/harry2.jpg",
+        "cantidad": 7
+    },
+
+
+    {   "codigo": 3,
+        "nombre": "HARRY POTTER Y EL MISTERIO DEL PRINCIPE",
+        "precio": 12.00, 
+        "autor":"J.K. ROWLING",
+        "imagenUrl":"img/harry3.jpg",
+        "cantidad": 7
+    },
+
+    { "codigo": 4,
+        "nombre": "HARRY POTTER Y EL CALIZ DE FUEGO",
+        "precio": 12.00, 
+        "autor":"J.K. ROWLING",
+        "imagenUrl":"img/harry4.jpg",
+        "cantidad": 7
+    },
+
+    { "codigo": 5,
+        "nombre": "HARRY POTTER Y LA ORDEN DEL FENIX",
+        "precio": 15.00, 
+        "autor":"J.K. ROWLING" ,
+        "imagenUrl":"img/harry5.jpg",
+        "cantidad": 7
+    },
+
+    
+    { "codigo": 6,
+        "nombre": "HARRY POTTER Y LAS RELIQUIAS DE LA MUERTE",
+        "precio": 15.00, 
+        "autor":"J.K. ROWLING" ,
+        "imagenUrl":"img/harry6.jpg",
+        "cantidad": 7
+
+    },
+    {
+        "codigo": 1,
+        "nombre":"CHALET01",
+        "precio": 30,
+        "descripcion":"expremidor de brazo",
+        "imagenUrl":"img/chalet01.jpg",
+    },
+     
+    {
+        "codigo": 2,
+        "nombre":"CHALET02",
+        "precio": 15,
+        "descripcion":"batidora de brazo",
+        "imagenUrl":"img/chalet02.jpg",
+    },
+
+    {
+        "codigo": 3,
+        "nombre":"CHALET03",
+        "precio": 30,
+        "descripcion":"cafetera doble",
+        "imagenUrl":"img/chalet03.jpg",
+    },
+
+    {
+        "codigo": 4,
+        "nombre":"CHALET04",
+        "precio": 500,
+        "descripcion":"frogorifico gris",
+        "imagenUrl":"img/chalet04.jpg",
+    }
+]

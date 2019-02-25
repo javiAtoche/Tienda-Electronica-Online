@@ -1,0 +1,158 @@
+
+
+@mixin position($start,$end) {
+    
+    @for $istart from $start to $end+1 {
+
+
+        .top-#{$istart}rem{
+            top: #{$istart/10}rem !important;
+        }
+        .bottom-#{$istart}rem{
+            bottom: #{$istart/10}rem !important;
+        }
+        .left-#{$istart}rem{
+            left: #{$istart/10}rem !important;
+        }
+        .right-#{$istart}rem{
+            right: #{$istart}rem !important;
+        }
+
+        // porcentaje
+        .top-#{$istart}{
+            top: #{$istart} !important;
+        }
+        .bottom-#{$istart}{
+            bottom: #{$istart} !important;
+        }
+        .left-#{$istart}{
+            left: #{$istart} !important;
+        }
+        .right-#{$istart}{
+            right: #{$istart} !important;
+        }
+
+        @media screen and (min-width: 576px) {
+            // rem
+            .top-sm-#{$istart}rem{
+                top: #{$istart/10}rem !important;
+            }
+            .bottom-sm-#{$istart}rem{
+                bottom: #{$istart/10}rem !important;
+            }
+            .left-sm-#{$istart}rem{
+                left: #{$istart/10}rem !important;
+            }
+            .right-sm-#{$istart}rem{
+                right: #{$istart}rem !important;
+            }
+
+            // porcentaje
+            .top-sm-#{$istart}{
+                top: #{$istart} !important;
+            }
+            .bottom-sm-#{$istart}{
+                bottom: #{$istart} !important;
+            }
+            .left-sm-#{$istart}{
+                left: #{$istart} !important;
+            }
+            .right-sm-#{$istart}{
+                right: #{$istart} !important;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            // rem
+            .top-md-#{$istart}rem{
+                top: #{$istart/10}rem !important;
+            }
+            .bottom-md-#{$istart}rem{
+                bottom: #{$istart/10}rem !important;
+            }
+            .left-md-#{$istart}rem{
+                left: #{$istart/10}rem !important;
+            }
+            .right-md-#{$istart}rem{
+                right: #{$istart}rem !important;
+            }
+
+            // porcentaje
+            .top-md-#{$istart}{
+                top: #{$istart} !important;
+            }
+            .bottom-md-#{$istart}{
+                bottom: #{$istart} !important;
+            }
+            .left-md-#{$istart}{
+                left: #{$istart} !important;
+            }
+            .right-md-#{$istart}{
+                right: #{$istart} !important;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            // rem
+            .top-lg-#{$istart}rem{
+                top: #{$istart/10}rem !important;
+            }
+            .bottom-lg-#{$istart}rem{
+                bottom: #{$istart/10}rem !important;
+            }
+            .left-lg-#{$istart}rem{
+                left: #{$istart/10}rem !important;
+            }
+            .right-lg-#{$istart}rem{
+                right: #{$istart}rem !important;
+            }
+
+            // porcentaje
+            .top-lg-#{$istart}{
+                top: #{$istart} !important;
+            }
+            .bottom-lg-#{$istart}{
+                bottom: #{$istart} !important;
+            }
+            .left-lg-#{$istart}{
+                left: #{$istart} !important;
+            }
+            .right-lg-#{$istart}{
+                right: #{$istart} !important;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            // rem
+            .top-xl-#{$istart}rem{
+                top: #{$istart/10}rem !important;
+            }
+            .bottom-xl-#{$istart}rem{
+                bottom: #{$istart/10}rem !important;
+            }
+            .left-xl-#{$istart}rem{
+                left: #{$istart/10}rem !important;
+            }
+            .right-xl-#{$istart}rem{
+                right: #{$istart}rem !important;
+            }
+
+            // porcentaje
+            .top-xl-#{$istart}{
+                top: #{$istart} !important;
+            }
+            .bottom-xl-#{$istart}{
+                bottom: #{$istart} !important;
+            }
+            .left-xl-#{$istart}{
+                left: #{$istart} !important;
+            }
+            .right-xl-#{$istart}{
+                right: #{$istart} !important;
+            }
+        }
+    }
+}
+
+
+@include position(0,100);

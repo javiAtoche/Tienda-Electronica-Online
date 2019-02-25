@@ -1,0 +1,144 @@
+// SIZES
+// crea alturas y anchuras en porcentajes
+@mixin heightWidthPorcentaje($start,$end) {
+    $istart: $start;
+    $iend: $end;
+    @while $istart <= $iend{
+
+        $porcentaje: (($istart*100%)/100);
+        .h-#{$istart}{
+            height: $porcentaje !important;
+        }
+        .mh-#{$istart}{
+            max-height: $porcentaje !important;
+        }
+        .w-#{$istart}{
+            width: $porcentaje !important;
+        }
+        .mw-#{$istart}{
+            max-width: $porcentaje !important;
+        }
+        $istart: $istart + 5;
+    }
+}
+
+// crea alturas y anchuras en porcentajes del 1 al 100
+@include heightWidthPorcentaje(0,100);
+
+
+// generamos clases para alturas, anchuras, bordes, font-size
+@mixin sizesNotPorcentaje($start,$end) {
+    $istart: $start;
+    $iend: $end;
+    @while $istart <= $iend {
+
+        .h-#{$istart}remDecimal{
+            height: #{$istart/10}rem !important;
+        }
+        .h-#{$istart}rem{
+            height: #{$istart}rem !important;
+        }
+        .h-#{$istart}px{
+            height: #{$istart}px !important;
+        }
+        .mh-#{$istart}rem{
+            max-height: #{$istart}rem !important;
+        }
+        .w-#{$istart}remDecimal{
+            width: #{$istart/10}rem !important;
+        }
+        .w-#{$istart}rem{
+            width: #{$istart}rem !important;
+        }
+        .w-#{$istart}px{
+            width: #{$istart}px !important;
+        }
+        .mw-#{$istart}rem{
+            max-width: #{$istart}rem !important;
+        }
+        .border-w-#{$istart}{
+            border-width: #{$istart/10}rem !important;
+        }
+        .font-size-#{$istart}{
+            font-size: #{$istart/10}rem !important;
+        }
+
+        @media screen and (min-width: 576px) {
+            .h-sm-#{$istart}rem{
+                height: #{$istart}rem !important;
+            }
+        
+            .w-sm-#{$istart}rem{
+                width: #{$istart}rem !important;
+            }
+        
+            .border-w-sm-#{$istart}{
+                border-width: #{$istart/10}rem !important;
+            }
+        
+            .font-size-sm-#{$istart}{
+                font-size: #{$istart/10}rem !important;
+            }
+        }
+    
+        @media screen and (min-width: 768px) {
+            .h-md-#{$istart}rem{
+                height: #{$istart}rem !important;
+            }
+        
+            .w-md-#{$istart}rem{
+                width: #{$istart}rem !important;
+            }
+        
+            .border-w-md-#{$istart}{
+                border-width: #{$istart/10}rem !important;
+            }
+        
+            .font-size-md-#{$istart}{
+                font-size: #{$istart/10}rem !important;
+            }
+        }
+    
+        @media screen and (min-width: 992px) {
+            .h-lg-#{$istart}rem{
+                height: #{$istart}rem !important;
+            }
+        
+            .w-lg-#{$istart}rem{
+                width: #{$istart}rem !important;
+            }
+        
+            .border-w-lg-#{$istart}{
+                border-width: #{$istart/10}rem !important;
+            }
+        
+            .font-size-lg-#{$istart}{
+                font-size: #{$istart/10}rem !important;
+            }
+        }
+    
+        @media screen and (min-width: 1200px) {
+            .h-xl-#{$istart}rem{
+                height: #{$istart}rem !important;
+            }
+        
+            .w-xl-#{$istart}rem{
+                width: #{$istart}rem !important;
+            }
+        
+            .border-w-xl-#{$istart}{
+                border-width: #{$istart/10}rem !important;
+            }
+        
+            .font-size-xl-#{$istart}{
+                font-size: #{$istart/10}rem !important;
+            }
+        }
+    
+    
+        $istart: $istart + 1;
+    }
+}
+
+
+@include sizesNotPorcentaje(0, 100);

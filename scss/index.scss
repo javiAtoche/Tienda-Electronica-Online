@@ -1,0 +1,121 @@
+@import "_fonts.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+@import "_borders.scss";
+@import "_position.scss";
+
+// @font-face{
+//     font-family: "fugazone";
+//     src: url("../fonts/FugazOne-Regular.ttf") format("truetype");
+// }
+
+
+// --------------------------------------
+
+//HEADER
+header{
+    // margin: 0 -15px !important; 
+}
+
+// HEADER ROW 1: LOGO, SEARCH, CARRITO
+
+
+
+
+
+
+
+
+
+//SECTION 1 carousel
+
+#carousel-section-1 img{
+    object-fit: cover;
+    object-position: 0% 75%;
+    // object-position: center bottom;
+    @extend .h-30rem;
+}
+
+//SECTION 2 productos
+
+// div que envuelve la info del producto
+.producto{
+    // border: 0.2rem solid $azulPrimary !important;
+    // border-radius: 2rem;
+    // @extend .h-40rem;
+    // width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+}
+// .producto-hover se hace visible cuando me pongo encima del producto
+.producto:hover .producto-hover{
+    visibility: visible;
+}
+// clase que hará aparecer la opcion añadir al carrito cuando pasemos el raton por encima del producto
+.producto-hover{
+    
+    border: 2rem solid $rojoDangerHover;
+    border-radius: 2rem;
+
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+    height: 100%;
+    width: 100%;
+
+    visibility: hidden;
+    position: absolute;
+
+
+}
+
+
+//caja que envuelve a la imagen
+.producto .caja-imagen{
+    padding: 1.5rem !important;
+    // border-bottom: 0.2rem solid $dark !important;
+    border-width: 0.3rem 0.3rem 0 0.3rem ;
+    border-style: solid;
+    border-color: $azulPrimary;
+    border-radius: 2rem 2rem 0 0 !important;
+    
+}
+// div > img
+// .producto .caja-imagen img{
+//     width: 100% !important;
+//     height: 100% !important;
+//     border-radius: 2rem !important;
+//     // border: 1px solid black;
+
+// }
+// div > div > h5 y p
+.producto .caja-descripcion{
+    background-color: $dark;
+    border-radius: 0 0 2rem 2rem;
+    padding: 1.5rem;
+    // word-break: break-word !important;
+    
+}
+
+.titulo-producto{
+    border-top: 0.2rem solid $azulPrimary;
+    border-width: 50%;
+    padding: 1rem;
+    color: $light;
+    // background-color: $grisSecondaryHover;
+    // word-break: break-word !important;
+    
+}
+
+.precio-producto{
+    // border-top: 0.2rem solid $rojoDanger;
+    padding: 1rem;
+    color: $rojoDanger;
+    // background-color: $rojoDangerHover;
+    font-weight: bold;
+    @extend .font-size-15;
+
+    // word-break: break-all !important;
+    // word-wrap: break-word !important;
+}

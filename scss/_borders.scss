@@ -1,0 +1,56 @@
+
+
+// funcion que crea borders azules desde '$istart' hasta '$iend' con la unidad de tamanyo especificada por '$unit'
+@mixin createBorders($istart,$iend,$unit,$name,$color){
+    @for $i from $istart to $iend {
+        .border-#{$i}#{$unit}-#{$name}{
+            border: #{$i}#{$unit} solid #{$color} !important;
+        }
+
+        .border-top-#{$i}#{$unit}-#{$name}{
+            border-top: #{$i}#{$unit} solid #{$color} !important;
+        }
+
+        .border-right-#{$i}#{$unit}-#{$name}{
+            border-right: #{$i}#{$unit} solid #{$color} !important;
+        }
+
+        .border-bottom-#{$i}#{$unit}-#{$name}{
+            border-bottom: #{$i}#{$unit} solid #{$color} !important;
+        }
+
+        .border-left-#{$i}#{$unit}-#{$name}{
+            border-left: #{$i}#{$unit} solid #{$color} !important;
+        }
+    }
+}
+
+@include createBorders(1,10,px,azulPrimary,$azulPrimary);
+@include createBorders(1,10,px,azulDeepKoamaru,$azulDeepKoamaru);
+@include createBorders(1,10,px,rojoDanger,$rojoDanger);
+@include createBorders(1,10,px,rojoPomeGranate,$rojoPomeGranate);
+@include createBorders(1,10,px,amarilloWarning,$amarilloWarning);
+@include createBorders(1,10,px,verdeSuccess,$verdeSuccess);
+@include createBorders(1,10,px,naranja,$naranja);
+@include createBorders(1,10,px,light,$light);
+@include createBorders(1,10,px,dark,$dark);
+@include createBorders(1,10,px,grisSecondary,$grisSecondary);
+
+
+
+@mixin roundedPorcentaje($porcentaje) {
+    .roundedPorcentaje-#{$porcentaje}{
+        border-radius: ($porcentaje * 100%) / 100;
+    }
+}
+
+@mixin roundedRem($rem) {
+    .roundedRem-#{$rem}{
+        border-radius: #{$rem/10}rem;
+    }
+}
+
+@for $i from 0 to 101{
+    @include roundedPorcentaje($i);
+    @include roundedRem($i);
+}

@@ -1,0 +1,77 @@
+productos = [
+    {
+        "codigo": 1,
+        "nombre":"Languages",
+        "precio":50,
+        "descripcion":"English",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/learnenglish.png"
+    },
+
+    {
+        "codigo": 2,
+        "nombre":"Languages",
+        "precio":50,
+        "descripcion":"Spanish",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/spanish.jpg"
+    },
+
+    {
+        "codigo": 3,
+        "nombre":"IT",
+        "precio":50,
+        "descripcion":"Animación digital",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/animaciondigital.jpg"
+    },
+
+    {
+        "codigo": 7,
+        "nombre":"IT",
+        "precio":50,
+        "descripcion":"Introducciòn HTML/CSS/Java",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/html-css-java.jpg"
+    },
+
+    {
+        "codigo": 5,
+        "nombre":"Matemáticas",
+        "precio":50,
+        "descripcion":"Microeconomia",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/microeconomia.jpg"
+    },
+    
+    {
+        "codigo": 4,
+        "nombre":"Matemáticas",
+        "precio":50,
+        "descripcion":"Macroeconomia",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/macroeconomia.jpeg"
+    },
+
+    
+
+    {
+        "codigo": 6,
+        "nombre":"Economia y Finanzas",
+        "precio":50,
+        "descripcion":"Mercados financieros y de capitales",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/mercadosfinancierosydecapitales.jpg"
+    },
+
+   
+
+    {
+        "codigo": 8,
+        "nombre":"Ciencia",
+        "precio":50,
+        "descripcion":"Engieneriaelectrica",
+        "cantidad":"50 horas",
+        "imagenUrl":"img/engineriaelectrica.jpg"
+    }
+]

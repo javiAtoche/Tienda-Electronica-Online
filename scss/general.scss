@@ -1,0 +1,282 @@
+@import "_fonts.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+@import "_borders.scss";
+@import "_position.scss";
+
+// GENERAL
+*{
+    font-family: 'exo';
+    font-weight: 500;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 800;
+}
+
+
+// PRODUCTOS
+
+
+// enlaces
+a:hover{
+    text-decoration: none !important;
+}
+a:hover p{
+    color: $azulPrimary !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+// bordes
+// borde sombra de texto color rojo
+.border-letter-danger{
+    text-shadow: 0 0.1rem 0.2rem $rojoDanger , 0.1rem 0 0.2rem $rojoDanger, 0 -0.1rem 0.2rem $rojoDanger, -0.1rem 0 0.2rem $rojoDanger;
+}
+// borde sombra de texto color amarillo
+.border-letter-warning{
+    text-shadow: 0 0.1rem 0.2rem $amarilloWarning , 0.1rem 0 0.2rem $amarilloWarning, 0 -0.1rem 0.2rem $amarilloWarning, -0.1rem 0 0.2rem $amarilloWarning;
+}
+// fuentes y texto
+.text-wrap{
+    word-wrap: break-word !important;
+    // word-break: break-word !important;
+}
+
+// imagenes
+.img-fit {
+    @extend .mw-100;
+    @extend .mh-100;
+    object-fit: cover;
+    object-position: center;
+    // overflow: hidden;
+}
+
+//desbordamiento \ scrolls
+.overflow-hidden{
+    overflow: hidden;
+}
+.scroll-y{
+    overflow-y: scroll;
+}
+.scroll-x{
+    overflow-x: scroll;
+}
+.scroll-xy{
+    overflow: scroll;
+}
+
+// iconos
+    
+.logo{ // HEADER ROW 1 logo
+    width: 200px;
+    height: auto;
+}
+.rounded-left-circle{
+    border-radius: 5rem 0 0 5rem !important;
+}
+.rounded-right-circle{
+    border-radius: 0 5rem 5rem 0 !important;
+}
+
+// SELECT
+select{
+    -webkit-appearance: none !important;
+    -moz-appearance:    none !important;
+    appearance:         none !important;
+
+    background-image: url('../img/arrow-down-white-1.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 1rem !important;
+    background-position: right !important;
+    
+    
+}
+
+
+// <- HEADER ROW 1 CARRITO ->
+
+// ventana carrito en pequenyo
+#caja-carrito{
+    @extend .w-30rem;
+    max-height: 25rem;
+    position: absolute;
+    z-index: 10;
+    top: 190%;
+    right: 0%;
+}
+// CAJA-FILA-PRODUCTOS-CARRITO caja de las filas de los productos
+#caja-productos-carrito{
+    border-bottom: 0.3rem dashed $grisSecondary;
+    // max-height: 75%;
+    overflow-y: scroll;
+}
+//clase que representa una fila de producto del carrito
+.fila-producto-carrito{
+    border-width: 0.3rem 0 0 0;
+    border-style: ridge;
+    border-color: $naranja;
+    width: 100%;
+    
+    // margin: 0.5rem 0 0 0.5rem;
+}
+// columna 1 que contiene la imagen del producto
+.col1-carrito{
+}
+// columna 2 que contiene la informacion del producto
+.col2-carrito{
+    border-width: 0 0.3rem 0 0.3rem;
+    border-style: dotted;
+    border-color: $azulPrimary;
+}
+// columna 3 que contiene el icono eliminar producto
+//icono 'eliminar'
+.col3-carrito i{
+    @extend .font-size-20;
+}
+//clase que representa la fila de botones del carrito donde apareceran botones como 'ir al carro', 'comprar'
+.fila-btn-carrito{
+    width: 100%;
+}
+
+
+
+
+
+// HEADER ROW 2: INFORMACION
+
+// HEADER ROW 2 icono
+div#info-header-div > i{
+    font-size: 2rem;
+}
+
+div#info-header-div > i::after{
+    content: '\25BC';
+
+    position: relative;
+    top: 2px;
+    left: 3px;
+
+    font-size: 0.8rem;
+    color: white;
+}
+
+div#info-header-div i:hover, div#info-header-div i:hover::after{
+    cursor: pointer;
+
+    // transition-delay: 0s;
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: ease-in;
+
+    color: $amarilloWarningHover !important;
+}
+
+
+// HEADER ROW 2 informacion collapse
+#info-header-1{
+    z-index: 10;
+    top: 10%;
+    left: 90%;
+    // left: 12rem;
+}
+
+
+
+//NAV
+// NAV brand
+.logo.navbar-brand{
+    width: 100px;
+    height: auto;
+}
+// NAV hamburguer icon
+button.navbar-toggler:hover{
+    @extend .bg-grisSecondaryExtraSoft;
+}
+
+//NAV li a
+// .active
+header + nav li.active a{
+    color: $rojoDanger !important;
+    
+}
+header + nav li.active a::after{
+    content: '';
+    display: block;
+    background-color: $rojoDanger;
+    height: 0.2rem;
+    width: 100%;
+}
+// :not(.acitve)
+header + nav li:not(.active) a{
+    //transiciones
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+header + nav li:not(.active) a:hover{
+    color: $rojoDanger !important;
+}
+header + nav li:not(.active) a::after{
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 0;
+    background-color: $rojoDanger;
+    //transiciones
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+header + nav li:not(.active) a:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+//PROGRESS
+.circulo{
+    // position: relative;
+    @extend .w-10rem;
+    @extend .h-10rem;
+    @extend .bg-dark;
+    border-radius: 5rem;
+}
+
+.circulo .circulo-puntuacion{
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // bottom: 50%;
+
+
+}
+
+
+
+
+// PIE PAGINA
+a.activeNumPage{
+    // color: $rojoPomeGranate !important;
+    @extend .text-rojoPomeGranate;
+    @extend .border-bottom-5px-rojoPomeGranate;
+ 
+}
+// .activeNumPage::after{
+//     content: "-";
+//     display: block;
+//     background-color: $rojoPomeGranate !important;
+//     @extend .w-100;
+//     @extend .h-3remDecimal;
+// }
+[datos*="caja-paginas"] a:hover{
+    transform: scale(1.3,1.3);
+    // color: rgba($color: $azulElectronBlue, $alpha: 0.4) !important;
+    // background-blend-mode: overlay;
+    
+}

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- icon in tab -->
+    <link rel="icon" href="img/desarrolloweb_icono_carrito.ico">
+
+
+    <!-- PREFIX FREE: para que se incluyan los prefijos sin tener que hacerlo a mano -->
+    <script src="js/prefixfree.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <!-- -- FontAwesome -- -->
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">  -->
+    <!-- -- CSS Personal -- -->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/detalle_producto.css">
+
+    <!-- title -->
+    <title>DETALLE PRODUCTO</title>
+
+  </head>
+  <body>
+      
+<div id="div-principal" class="">
+
+    <!-- HEADER -->
+    <header class="bg-dark p-2 border-bottom border-primary border-w-5">
+
+      <!-- ++++++ HEADER ROW 1 ++++++ -->
+      <!-- logo, busqueda carrito -->
+      <div class="flex-wrap d-flex justify-content-between align-items-center">
+
+        <!-- 1 -->
+        <!-- logo -->
+        <div class="order-0 col-6 col-lg-2 d-flex align-items-center py-1">
+          <img class="logo img-fit" src="img/logo2.png" alt="logo2.png" title="logo de la empresa">
+        </div><!-- .1 -->
+
+        <!-- 2 -->
+        <!-- buscador barra search -->
+        <div class="order-2 order-lg-1 col-12 col-lg-8 d-flex justify-content-center align-items-center h-3rem position-relative py-1">
+          
+          <!-- 1 dropdown -->
+          <select id="select-categorias" name="categorias"  class="col-3 h-100 btn btn-outline-primary rounded-left-circle text-truncate">
+            
+          </select>
+          <!-- icono flechita blanca al lado del 'select' -->
+          <i class="fas fa-caret-down position-absolute text-white font-size-15rem"></i>
+
+          <!-- 2 input -->
+          <input id="input-search" type="text" class="col-7 h-100" placeholder="Search here" aria-label="Search" aria-describedby="searching">
+
+          <!-- 3 button search -->
+          <button id="button-search-product" type="button" class=" col-2 btn btn-outline-primary rounded-right-circle h-100 text-truncate">
+              <!-- texto search -->
+            <span class="d-none d-md-block">Search</span>
+              <!-- icono search -->
+            <i class="d-md-none fas fa-search"></i>
+          </button>
+
+        </div><!-- .2 -->
+
+        <!-- 3 -->
+        <!-- iconos corazon y carrito -->
+        <div class="order-1 order-lg-2 col-6 col-lg-2 d-flex justify-content-end align-items-center text-white py-1">
+          <!-- 1 -->
+          <a class="d-flex flex-column justify-content-center align-items-center px-2 text-white" href="#">
+            <i class="far fa-heart text-danger"></i>
+            <p class="m-0 text-center">Your Wish List</p>
+          </a>
+          <!-- 2 -->
+          <a id="carrito-link" class="d-flex flex-column justify-content-center align-items-center px-2 text-white" href="#">
+            <i class="fas fa-cart-arrow-down text-danger"></i>
+            <p class="m-0 text-center">Your Cart</p>
+          </a>
+
+          <!-- CAJA CARRITO -->
+          <div id="caja-carrito" class="invisible d-flex flex-column align-items-center bg-light border border-primary rounded p-2">
+            <!-- caja fila productos carrito -->
+            <div id="caja-productos-carrito" class="w-100 p-2">
+
+              <!-- 
+                -- fila i -- 
+              -->
+
+            </div><!-- .caja fila productos carrito -->
+            <!-- fila 2 -->
+            <div class="fila-btn-carrito d-flex justify-content-around">
+              <!-- boton ir a carro -->
+              <button id="btn-ir-a-carro" class="col-5 btn btn-outline-success mt-3">
+                  Ir a carrito
+              </button><!-- .boton ir a carrito -->
+              <!-- boton compra -->
+              <button id="btn-comprar-carrito" class="col-5 btn btn-outline-danger mt-3">
+                  Comprar
+              </button><!-- .boton compra -->
+            </div><!-- .fila 2 -->
+
+          </div><!-- .CAJA CARRITO -->
+
+
+        </div><!-- .3 -->
+
+      </div><!-- .logo, busqueda carrito -->
+
+      <!-- ++++++ HEADER ROW 2 ++++++ -->
+      <!-- informacion -->
+      <div id="info-header" class="d-flex mt-2">
+          
+          <!-- --1-- ICONO INFO -->
+          <div id="info-header-div" class="d-flex justify-content-center align-items-center text-white position-relative px-3">
+            <i class="fas fa-info-circle text-warning"></i>
+            <!-- <p class="d-none m-0 pl-1">Información</p> -->
+
+            <!-- CUADRO INFO OCULTO -->
+            <!-- el cuadro flotante con la informacion que se mostrara al pulsar el boton info ** CUADRO INFORMACION **-->
+            <div id="info-header-1" class="invisible d-flex flex-column align-items-start position-absolute bg-dark border border-warning rounded border-w-3 p-2">
+              <!-- telefono -->
+              <a class="col-12 d-flex justify-content-center align-items-baseline px-2 text-nowrap" href="#">
+                  <i class="col-2 fas fa-phone-volume text-danger"></i>
+                  <p class="col-10 text-white m-0 pl-1">+34-965558887</p>
+              </a>
+              <!-- email -->
+              <a class="col-12 d-flex justify-content-center align-items-baseline px-2 text-nowrap" href="#">
+                  <i class="col-2 far fa-envelope text-danger"></i>
+                  <p class="col-10 text-white m-0 pl-1">ventaelectronica@email.com</p>
+              </a>
+              <!-- localizacion -->
+              <a class="col-12 d-flex justify-content-center align-items-baseline px-2 text-nowrap" href="#">
+                  <i class="col-2 fas fa-map-marker-alt text-danger"></i>
+                  <p class="col-10 text-white m-0 pl-1">La Puebla de Cazalla,Sevilla</p>
+              </a>
+            </div><!-- .CUADRO INFO OCULTO -->
+
+          </div><!-- .ICONO INFO -->
+          
+          
+
+          <!-- --2-- -->
+          <!-- la informacion la pondremos en una caja aparte, asi que guardaremos el espacio de 7 columnas para que los elementos queden  colocados de esa manera -->
+          <!-- <div class="col-7 d-flex align-items-center "></div> -->
+        
+          <!-- --3-- -->
+          <div id="info-header-2" class=" d-flex justify-content-end align-items-center ml-auto">
+              <!-- moneda -->
+              <a class="d-flex justify-content-between align-items-baseline px-2" href="#">
+                  <i class="fas fa-coins text-danger"></i>
+                  <p class="text-white m-0 pl-1 text-center">EUR</p>
+              </a>
+              <!-- usuario -->
+              <a class="d-flex justify-content-between align-items-baseline px-2" href="#">
+                  <i class="fas fa-user text-danger"></i>
+                  <p class="text-white m-0 pl-1 text-center">My Account</p>
+              </a>
+          </div>
+      </div><!-- .informacion -->
+
+      
+
+
+    </header><!-- .HEADER -->
+    
+    <!-- NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+      <!-- brand icon -->
+      <a class="navbar-brand" href="#"><img class="navbar-brand logo m-0 p-0" src="img/logo2.png" alt="logo2.png" title="logo de la empresa"></a>
+
+      <!-- boton de hamburguesa -->
+      <button class="navbar-toggler ml-auto border-2px-dark" type="button" data-toggle="collapse" data-target="#header-navbar" aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button><!-- .boton de hamburguesa -->
+
+      <!-- navegacion -->
+      <div id="header-navbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html" target="_blank">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hot Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consulta.html" target="_blank">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Laptops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Smartphones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accesories</a>
+          </li>
+        </ul>
+      </div><!-- .navegacion -->
+      
+    </nav><!-- .NAVEGACION -->
+
+    <!-- MAIN -->
+    <main>
+      
+      <!-- SECTION 1: DETALLE PRODUCTO -->
+      <section datos="section1-detalle-producto" class="d-flex justify-content-center align-items-center h-25rem mb-5">
+
+        <!-- INSERTA DATOS DEL PRODUCTO -->
+        
+
+      </section>
+  
+      <!-- SECTION 2: COMENTARIOS -->
+      <section datos="section2-detalle-producto" class="d-flex justify-content-center align-items-center mb-5 bg-grisSecondaryExtraSoft">
+
+        <!-- rueda con puntuacion de 0 a 10 del producto -->
+        <div class="col-3 d-flex justify-content-center align-items-center bg-grisSecondaryExtraSoft">
+          
+            <!-- circulo progreso -->
+            <div class="circulo d-flex justify-content-center align-items-center">
+              <span class="font-size-25 text-white">
+                0.0
+              </span> 
+            </div><!-- .circulo progreso -->
+        
+        </div><!-- .rueda con puntuacion de 0 a 10 del producto -->
+
+        <!-- caja comentarios -->
+        <div datos="section2-caja-comentarios" class="col-9 d-flex flex-column justify-content-center align-items-center p-2 bg-amarilloBeekeeper">
+          <!-- comentarios -->
+          <div class="col-12 d-flex flex-column justify-content-center p-2 mb-2 roundedRem-10">
+
+              <!-- texto -->
+              <!-- 1 -->
+              <div class="w-100 mb-2 roundedRem-10 bg-light position-relative">
+                <span class="position-absolute left-10rem text-rojoPomeGranate">usuario1</span>
+                <p class="p-4 m-0">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora assumenda sint veritatis ducimus. At nisi reiciendis incidunt nihil, dolore deleniti harum praesentium voluptatum aperiam rerum consequatur quisquam temporibus illum repellat!
+                </p>
+              </div><!-- .1 -->
+              <!-- 2 -->
+              <div class="w-100 mb-2 roundedRem-10 bg-light position-relative">
+                  <span class="position-absolute left-10rem text-rojoPomeGranate">usuario2</span>
+                  <p class="p-4 m-0">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium eveniet quae a nostrum nulla dignissimos id, omnis ipsa neque animi laborum natus eius magni soluta, vel sapiente, expedita libero facilis debitis enim! Ab dolores perferendis, doloremque est error labore? Dolor deserunt incidunt officiis pariatur alias animi illum, aspernatur dolore, qui cum optio neque sed nulla. Officia, laborum minima maiores impedit ad sapiente, eum provident placeat quos pariatur nostrum reiciendis ipsa consectetur in itaque asperiores cumque? Sed alias iste ex, voluptatem dolor et adipisci, minima veniam, laborum cumque aliquid asperiores aut amet. Eveniet cum, a tempore harum odit adipisci illo voluptate.
+                  </p>
+              </div><!-- .2 -->
+
+            
+          </div><!-- .comentarios -->
+
+          <!-- num paginas -->
+            <!-- AQUI VA EL PAGINADOR -->
+          <!-- .num paginas -->
+
+        </div><!-- .caja comentarios -->
+
+        
+      </section><!-- .SECTION 2 -->
+
+      <!-- SECTION 3: PRODUCTOS RELACIONADOS POR CATEGORIA -->
+      <section>
+
+      </section>
+
+
+
+      
+
+
+
+    </main><!-- .MAIN -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        
+        
+        
+        <!-- -- ATRIBUCIONES -- -->
+        <a href="https://www.freepik.es/fotos-vectores-gratis/fondo">Vector de fondo creado por rawpixel.com - www.freepik.es</a>
+
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+
+
+
+
+    <!-- JSON Files -->
+    <script src="js/categoriasJSON.json"></script>
+    <script src="js/productosJSON.json"></script>
+
+    <!-- webpack.config.js -->
+    <!-- <script src="js/webpack.config.js"></script> -->
+    
+    
+
+    <!-- -- JS Personal -- -->
+    <script src="js/utiles.js"></script>
+    <script src="js/comun_pagina.js"></script>
+    <script src="js/paginador.js"></script>
+    <script src="js/detalle_producto.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+

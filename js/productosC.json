@@ -1,0 +1,575 @@
+let productos = [
+    {       
+        "categoria": "Música" ,
+        "codigo": 1,
+        "nombre": "violin",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/1_violin.jpg",
+        "cantidad": 7,
+        "descuento": 0,
+        "ventas": 15
+    },
+
+    { 
+        "categoria": "Música" ,
+        "codigo": 2,
+        "nombre": "acordeon",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/2_acordeon.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 3,
+        "nombre": "bateria",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/3_bateria.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 4,
+        "nombre": "bongo",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/4_bongo.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 5,
+        "nombre": "saxofon",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/5_saxofon.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 6,
+        "nombre": "tuba",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/6_tuba.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 7,
+        "nombre": "piano",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/7_piano.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Música" ,
+        "codigo": 8,
+        "nombre": "xilofono",
+        "precio": 20.00, 
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL":"imgC/8_xilofono.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 9,
+        "nombre": "Taladro",
+        "precio": 20.00,
+        "descripcion":"Taladro inalambrico" ,
+        "imagenURL": "imgC/taladro.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 10,
+        "nombre": "Sierra Circular",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/circulo.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 11,
+        "nombre": "Clavos",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/clavos.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 12,
+        "nombre": "Destornillador",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/destornillador.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 13,
+        "nombre": "Hacha",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/Hacha.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 14,
+        "nombre": "Martillo",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/martillo.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 15,
+        "nombre": "Serrucho",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/serrucho.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Ferreteria" ,
+        "codigo": 16,
+        "nombre": "Sierra",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/sierra.jpg",
+        "cantidad": 10
+    },
+
+    {
+        "categoria": "Informática" ,
+        "codigo": 17,
+        "nombre":"PC-Sobremesa",
+        "precio":300,
+        "descripcion":"DELL PC-03",
+        "imagenURL":"imgC/p01.jpg",
+        "cantidad": 25
+    },
+       
+    {
+        "categoria": "Informática" ,
+        "codigo": 18,
+        "nombre":"Monitores",
+        "precio":120,
+        "descripcion": "LG-24S 24",
+        "imagenURL":"imgC/p07.png",
+        "cantidad": 14
+    },
+       
+    {
+        "categoria": "Informática" ,
+        "codigo": 19,
+        "nombre":"Portatiles",
+        "precio":499,
+        "descripcion": "Lenovo X35",
+        "imagenURL":"imgC/mini_mini_product01.png",
+        "cantidad": 17
+    },  
+       
+    {
+        "categoria": "Informática" ,
+        "codigo": 20,
+        "nombre":"Teclados",
+        "precio":25,
+        "descripcion": "Logitech",
+        "imagenURL":"imgC/p04.jpg",
+        "cantidad": 4
+    },   
+       
+    {
+        "categoria": "Informática" ,
+        "codigo": 21,
+        "nombre":"Ratones",
+        "precio":8,
+        "descripcion": "Logitech",
+        "imagenURL":"imgC/p05.jpg",
+        "cantidad": 13
+    },
+    
+    {
+        "categoria": "Informática" ,
+        "codigo": 22,
+        "nombre":"Impresoras",
+        "precio":85,
+        "descripcion": "HP Desjek H-6",
+        "imagenURL":"imgC/p06.png",
+        "cantidad": 8
+    },
+    
+    {
+        "categoria": "Informática" ,
+        "codigo": 23,
+        "nombre":"Tablets",
+        "precio":20,
+        "descripcion": "SAMSUNG",
+        "imagenURL":"imgC/p07.png",
+        "cantidad": 10
+    },
+    
+    {
+        "categoria": "Informática" ,
+        "codigo": 24,
+        "nombre":"Auriculares",
+        "precio":40,
+        "descripcion": "Onkyo",
+        "imagenURL":"imgC/p08.png",
+        "cantidad": 19
+    },
+
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 25,
+        "nombre": "iPhone 7",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto1.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 26,
+        "nombre": "iPhone 8",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto2.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 27,
+        "nombre": "iPhone 9",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto3.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 28,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto4.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 29,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto5.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 30,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto6.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 31,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto7.jpg",
+        "cantidad": 10
+    },
+    {
+        "categoria": "Electrodomésticos" ,
+        "codigo": 32,
+        "nombre": "Playstation 4 con 1 año de plus",
+        "precio": 20.00,
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa." ,
+        "imagenURL": "imgC/producto8.jpg",
+        "cantidad": 10
+    },
+
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 33,
+        "nombre": "Chocolate",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 10,
+        "imagenURL": "imgC/Wonka-Bar.jpg",
+        "cantidad": 2
+    },
+
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 34,
+        "nombre": "Candy",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 0.5,
+        "imagenURL": "imgC/candy1.jpg",
+        "cantidad": 20
+    },
+
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 35,
+        "nombre": "Jawbreakers",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 3,
+        "imagenURL": "imgC/candy2.jpg",
+        "cantidad": 18
+    },
+
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 36,
+        "nombre": "Orange Lollipop",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 8,
+        "imagenURL": "imgC/lol3.jpg",
+        "cantidad": 11
+    },
+    
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 37,
+        "nombre": "Strawberry Lollipop",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 8,
+        "imagenURL": "imgC/lol2.jpg",
+        "cantidad": 9
+    },
+    
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 38,
+        "nombre": "Red Liquorice",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 0.2,
+        "imagenURL": "imgC/liq.jpg",
+        "cantidad": 13
+    },
+    
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 39,
+        "nombre": "Dark Liquorice",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 0.2,
+        "imagenURL": "imgC/liqn.jpg",
+        "cantidad": 15
+    },
+    
+    {
+        "categoria": "Chucherias" ,
+        "codigo": 40,
+        "nombre": "Chewing Gum",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 0.2,
+        "imagenURL": "imgC/gum.png",
+        "cantidad": 5
+    },
+    {
+        "categoria": "Libros" ,
+        "codigo": 41,
+        "nombre": "El coleccionista de huesos",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":11,
+        "imagenURL":"imgC/el-coleccionista-de-huesos-2.jpg",
+        "cantidad":30
+    },
+
+    {  
+        "categoria": "Libros" ,
+        "codigo": 42,
+        "nombre": "El guardián entre el centeno",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":10,
+        "imagenURL":"imgC/el-guardian-entre-el-centeno.jpg",
+        "cantidad":40
+    },
+
+    {  
+        "categoria": "Libros" ,
+        "codigo": 43,
+        "nombre": "La última hoguera",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":20,
+        "imagenURL":"imgC/la-ultima-hoguera.jpg",
+        "cantidad":70
+    },
+    {
+        "categoria": "Libros" ,
+        "codigo": 44,
+        "nombre": "Violín negro en Orquesta Roja",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":21,
+        "imagenURL":"imgC/orquesta-roja.jpg",
+        "cantidad":60 
+    },
+
+    {
+        "categoria": "Libros" ,
+        "codigo": 45,
+        "nombre": "libro",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":6,
+        "imagenURL":"imgC/legiones-malditas.jpg",
+        "cantidad": 40
+    },
+
+    {
+        "categoria": "Libros" ,
+        "codigo": 46,
+        "nombre": "libro",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":10,
+        "imagenURL":"imgC/vestida-blanco.jpg",
+        "cantidad":30
+    },
+
+    {
+        "categoria": "Libros" ,
+        "codigo": 47,
+        "nombre": "libro",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":60,
+        "imagenURL":"imgC/juegos-hambre.jpg",
+        "cantidad":50
+    },
+
+    {
+        "categoria": "Libros" ,
+        "codigo": 48,
+        "nombre": "libro",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio":19,
+        "imagenURL":"imgC/traicion.jpg",
+        "cantidad":30
+    },
+
+    {
+        "categoria": "Libros" ,
+        "codigo": 49,
+        "nombre": "POTTER Y LA PIEDRA FILOSOFAL",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 7.00, 
+        "autor":"J.K. ROWLING",
+        "imagenURL":"imgC/harry1.jpg",
+        "cantidad": 7
+    },
+
+    {   
+        "categoria": "Libros" ,
+        "codigo": 50,
+        "nombre": "HARRY POTTER Y LA CAMARA SECRETA",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 9.00, 
+        "autor":"J.K. ROWLING",
+        "imagenURL":"imgC/harry2.jpg",
+        "cantidad": 7
+    },
+
+
+    {   
+        "categoria": "Libros" ,
+        "codigo": 51,
+        "nombre": "HARRY POTTER Y EL MISTERIO DEL PRINCIPE",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 12.00, 
+        "autor":"J.K. ROWLING",
+        "imagenURL":"imgC/harry3.jpg",
+        "cantidad": 7
+    },
+
+    { 
+        "categoria": "Libros" ,
+        "codigo": 52,
+        "nombre": "HARRY POTTER Y EL CALIZ DE FUEGO",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 12.00, 
+        "autor":"J.K. ROWLING",
+        "imagenURL":"imgC/harry4.jpg",
+        "cantidad": 7
+    },
+
+    { 
+        "categoria": "Libros" ,
+        "codigo": 53,
+        "nombre": "HARRY POTTER Y LA ORDEN DEL FENIX",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 15.00, 
+        "autor":"J.K. ROWLING" ,
+        "imagenURL":"imgC/harry5.jpg",
+        "cantidad": 7
+    },
+
+    
+    { 
+        "categoria": "Libros" ,
+        "codigo": 54,
+        "nombre": "HARRY POTTER Y LAS RELIQUIAS DE LA MUERTE",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis distinctio est blanditiis ipsam aut nemo beatae voluptates ut. Expedita molestiae totam beatae neque amet! Labore ipsum similique nihil possimus culpa.",
+        "precio": 15.00, 
+        "autor":"J.K. ROWLING" ,
+        "imagenURL":"imgC/harry6.jpg",
+        "cantidad": 7
+
+    },
+    {
+        "categoria": "Viviendas" ,
+        "codigo": 55,
+        "nombre":"CHALET01",
+        "precio": 30,
+        "descripcion":"expremidor de brazo",
+        "imagenURL":"imgC/chalet01.jpg",
+        "cantidad": 10
+    },
+     
+    {
+        "categoria": "Viviendas" ,
+        "codigo": 56,
+        "nombre":"CHALET02",
+        "precio": 15,
+        "descripcion":"batidora de brazo",
+        "imagenURL":"imgC/chalet02.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Viviendas" ,
+        "codigo": 57,
+        "nombre":"CHALET03",
+        "precio": 30,
+        "descripcion":"cafetera doble",
+        "imagenURL":"imgC/chalet03.jpg",
+        "cantidad": 7
+    },
+
+    {
+        "categoria": "Viviendas" ,
+        "codigo": 58,
+        "nombre":"CHALET04",
+        "precio": 500,
+        "descripcion":"frogorifico gris",
+        "imagenURL":"imgC/chalet04.jpg",
+        "cantidad": 7
+    }
+]

@@ -1,0 +1,70 @@
+ productos = [
+    {
+        "codigo": 1,
+        "nombre": "El coleccionista de huesos",
+        "descripcion":"",
+        "precio":11,
+        "imagenUrl":"img/el-coleccionista-de-huesos-2.jpg",
+        "cantidad":30
+    },
+
+    {  "codigo": 2,
+        "nombre": "El guardián entre el centeno",
+        "descripcion":"",
+        "precio":10,
+        "imagenUrl":"img/el-guardian-entre-el-centeno.jpg",
+        "cantidad":40
+    },
+
+    {  "codigo": 3,
+        "nombre": "La última hoguera",
+        "descripcion":"",
+        "precio":20,
+        "imagenUrl":"img/la-ultima-hoguera.jpg",
+        "cantidad":70
+    },
+    {
+        "codigo": 4,
+        "nombre": "Violín negro en Orquesta Roja",
+        "descripcion":"",
+        "precio":21,
+        "imagenUrl":"img/orquesta-roja.jpg",
+        "cantidad":60 
+    },
+
+    {
+        "codigo": 5,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":6,
+        "imagenUrl":"img/legiones-malditas.jpg",
+        "cantidad":40, 
+    },
+
+    {
+        "codigo": 6,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":10,
+        "imagenUrl":"img/vestida-blanco.jpg",
+        "cantidad":30,
+    },
+
+    {
+        "codigo": 7,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":60,
+        "imagenUrl":"img/juegos-hambre.jpg",
+        "cantidad":50,
+    },
+
+    {
+        "codigo": 8,
+        "nombre": "libro",
+        "descripcion":"",
+        "precio":19,
+        "imagenUrl":"img/traicion.jpg",
+        "cantidad":30,
+    },
+]

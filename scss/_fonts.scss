@@ -1,0 +1,39 @@
+//  font-face('Fugaz One', cursive);
+@font-face{
+    font-family: "fugazone",cursive;
+    src: url("../fonts/FugazOne-Regular.ttf") format("truetype");
+}
+
+// font-family: 'Poiret One', cursive;
+@font-face{
+    font-family: "poiretone";
+    src: url("../fonts/Poiret_One/PoiretOne-Regular.ttf") format("truetype");
+}
+
+// font-family: 'Advent Pro', sans-serif;
+@font-face{
+    font-family: "adventpro";
+    src: url("../fonts/Advent_Pro/AdventPro-Bold.ttf") format("truetype");
+    src: 
+    url("../fonts/Advent_Pro/AdventPro-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Advent_Pro/AdventPro-Light.ttf") format("truetype"),
+    url("../fonts/Advent_Pro/AdventPro-Medium.ttf") format("truetype"),
+    url("../fonts/Advent_Pro/AdventPro-Regular.ttf") format("truetype"),
+    url("../fonts/Advent_Pro/AdventPro-SemiBold.ttf") format("truetype"),
+    url("../fonts/Advent_Pro/AdventPro-Thin.ttf") format("truetype");
+}
+
+// font-family: 'Indie Flower', cursive;
+@font-face{
+    font-family: 'indieflower';
+    src: url("../fonts/IndieFlower.ttf") format("truetype")
+}
+
+// font-family: 'Exo', sans-serif;
+@font-face{
+    font-family: 'exo';
+    src: url("../fonts/Exo-SemiBold.ttf") format("truetype");
+    src: url("../fonts/Exo-SemiBoldItalic.ttf") format("truetype"),
+        url("../fonts/Exo-Thin.ttf") format("truetype"),
+        url("../fonts/Exo-ThinItalic.ttf") format("truetype");
+}

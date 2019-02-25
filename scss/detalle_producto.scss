@@ -1,0 +1,21 @@
+@import "_fonts.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+@import "_borders.scss";
+@import "_position.scss";
+
+
+
+// SECTION 1
+.titulo-producto1{
+    color: $azulPrimary;
+    @extend .border-bottom-3px-naranja;
+    @extend .font-size-15
+}
+
+.titulo-producto1:hover{
+    cursor: pointer;
+    color: $azulMidnightBlue;
+    // text-decoration: underline $naranja;
+    // @extend .border-bottom-3px-naranja;
+}

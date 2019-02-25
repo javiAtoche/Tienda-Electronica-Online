@@ -1,0 +1,628 @@
+let productos = [
+
+        {
+            
+            "categoria": "Laptops",
+            "codigo": 1,
+            "nombre": "MSI GL63 8RD-407XES Intel Core i7-8750H/8GB/512GB SSD/GTX1050Ti/15.6\"",
+            "precio": 999.00,
+            "descripcionCorta":"Prepárate para sentir todo el poder del juego con el potente ordenador portátil de MSI GL63 8RD-407XES. Un portátil Gaming dotado con un procesador Coffeelake i7, 8GB de RAM, 512GB SSD de almacenamiento, y todo bajo una potente gráfica NVIDIA GeForce® GTX 1050Ti 4GB GDDR5." ,
+            "descripcionLarga":{
+                "caracteristicas": [ 
+                    {
+                    "titulo": "Últimos procesadores de octava generación de Intel® Core™ i7. ",
+                    "descripcion": ["¡Da un gran salto en el rendimiento con los primeros procesadores de portátiles Hexa Core! Experimenta el juego mejorado y una renderización más rápida hasta en un 40% con los núcleos adicionales. ¡Cuantos más, mejor!"]
+                    },
+                    {
+                    "titulo": "Hasta GeForce® GTX 1050 4GB GDDR5 con rendimiento de un PC de sobremesa. ",
+                    "descripcion": ["Con el innovador Cooler Boost 5 y las características gaming únicas de MSI creadas por y para gamers, lo último en GeForce de NVIDIA, la GTX 1050, se lanza al terreno de los portátiles para un máximo rendimiento."]
+                    },
+                    {
+                    "titulo": "Exclusiva tecnología Cooler Boost 5. ", "descripcion": ["El calor es el elemento más original en la tierra. Es pura física que más energía generará más calor. El enfriamiento es, por lo tanto, una tarea difícil de abordar. La tecnología Cooler Boost 5 exclusiva de MSI crea módulos térmicos duales internamente mediante la asignación de tuberías de calor dedicadas para GPU y CPU. Con un clic en el botón de refuerzo del ventilador, un total de 6 tubos de calor y ventiladores duales expulsan el sistema de forma activa y efectiva, haciendo que el diseño de refrigeración sea el más alto de su tipo."]
+                    },
+                    {
+                    "titulo": "Teclado gaming de Steelseries. ",
+                    "descripcion": ["Cada detalle está especialmente calculado y diseñado para jugadores profesionales, y ahora es tuyo. Este teclado tiene retroiluminación, diseño ergonómico con desplazamiento de la llave de 1,9 mm para una mejor respuesta táctil y táctil, zona WASD óptima y soporte anti-fantasmas para hasta 45 teclas. La solución de blindaje de nivel mecánico hace que el teclado para juegos sea el más sólido de todos los tiempos."]
+                    },
+                    {
+                    "titulo": "5X Giant Speakers mejorados para un mayor realismo e inmersión. ",
+                    "descripcion": ["Los jugadores pueden sentir el rugido de todos los motores con los Giant Speakers actualizados. Diseño exclusivo de módulos de audio y cámara de sonido independiente para una sensación auditiva de primera."]
+                    },
+                    {
+                    "titulo": "Nuevo Dragon Center con exclusivo modo gaming. ", "descripcion": [""]
+                    }
+                ],
+                "especificaciones": [
+                    {
+                        "titulo": "Procesador. ",
+                        "descripcion": ["Coffeelake i7-8750H+HM370 (6 núcleos, 2,2 GHz - 4,1 GHz, 9 MB)"]
+                    },
+                    {
+                        "titulo": "Memoria. ",
+                        "descripcion": ["8GB DDR4 (2 slots, máximo de 32GB)"]
+                    },
+                    {
+                        "titulo": "Almacenamiento. ",
+                        "descripcion": ["512 GB SSD"]
+                    },
+                    {
+                        "titulo": "Display. ",
+                        "descripcion": ["15.6\" FHD (1920*1080), wideview 94%NTSC color Anti-glare"]
+                    },
+                    {
+                        "titulo": "Controlador gráfico. ",
+                        "descripcion": ["GeForce® GTX 1050 Ti, 4GB GDDR5"]
+                    },
+                    {
+                        "titulo": "Conectividad. ",
+                        "descripcion": ["Gb LAN","802.11 ac Wi-Fi + Bluetooth v5"]
+                    },
+                    {
+                        "titulo": "Cámara de portátil. ",
+                        "descripcion": ["HD type (30fps@720p)"]
+                    },
+                    {
+                        "titulo": "Micrófono. ",
+                        "descripcion": ["Sí"]
+                    },
+                    {
+                        "titulo": "Batería. ",
+                        "descripcion": ["6 celdas de Ion de litio 41 Whr"]
+                    },
+                    {
+                        "titulo": "Conexiones. ",
+                        "descripcion": ["1 x salida de auriculares","1 x entrada de micrófono","1x Type-C USB3.1 Gen1","3 x Type-A USB3.1 Gen1","1 x HDMI","1 x Mini-DisplayPort","1 x RJ45","Lector de Tarjetas 1x SD (XC/HC)"]
+                    },
+                    {
+                        "titulo": "Sistema operativo. ",
+                        "descripcion": ["FreeDos"]
+                    },
+                    {
+                        "titulo": "Dimensiones. ",
+                        "descripcion": ["383 x 260 x 29 mm"]
+                    },
+                    {
+                        "titulo": "Peso. ",
+                        "descripcion": ["2.2 Kg"]
+                    },
+                    {
+                        "titulo": "Color. ",
+                        "descripcion": ["Negro"]
+                    }
+                ]
+            },
+            "imagenURL": "img/productos/producto1.jpg",
+            "stock": 30,
+            "descuento": 9,
+            "ventas": 7,
+            "paginaProducto": "https://www.pccomponentes.com/msi-gl63-8rd-407xes-intel-core-i7-8750h-8gb-512gb-ssd-gtx1050ti-156"
+        },
+        {
+            "categoria": "TVs",
+            "codigo": 2,
+            "nombre": "Samsung UE55NU7175 55\" LED UltraHD 4K",
+            "precio": 489.00,
+            "descripcionCorta": "Samsung UE55NU7175 es el verdadero televisor UHD 4K. Disfrute de todo el realismo hasta el más mínimo detalle con 4 veces la resolución del televisor Full HD. Con Ultra HD, su contenido será aún más agradable gracias a colores y brillo increíblemente realistas.",
+            "descripcionLarga":{
+                "caracteristicas": [ 
+                    {
+                    "titulo": "",
+                    "descripcion": [""]
+                    },
+                    {
+                    "titulo": "",
+                    "descripcion": [""]
+                    },
+                    {
+                    "titulo": "", "descripcion": [""]
+                    },
+                    {
+                    "titulo": "",
+                    "descripcion": [""]
+                    },
+                    {
+                    "titulo": "",
+                    "descripcion": [""]
+                    },
+                    {
+                    "titulo": "",
+                    "descripcion": [""]
+                    }
+                ],
+                "especificaciones": [
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": ["",""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    },
+                    {
+                        "titulo": "",
+                        "descripcion": [""]
+                    }
+                ]
+            },
+            "imagenURL": "img/productos/producto2.jpg",
+            "stock": 80,
+            "descuento": 15,
+            "ventas": 12,
+            "paginaProducto": "https://www.pccomponentes.com/samsung-ue55nu7175-55-led-ultrahd-4k"
+        },
+        {
+            "categoria": "Monitores",
+            "codigo": 3,
+            "nombre": "Acer ED242QR 23.6\" LED FullHD FreeSync Curvo Blanco",
+            "precio": 129.00,
+            "descripcionCorta":"Te presentamos el monitor Acer ED242QR de 23.6\" LED FullHD Curvo FreeSync.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto3.jpg",
+            "stock": 58,
+            "descuento": 13,
+            "ventas": 15,
+            "paginaProducto": "https://www.pccomponentes.com/acer-ed242qr-236-led-fullhd-freesync-curvo-blanco"
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 4,
+            "nombre": "OnePlus 6 6/64GB Mirror Black Libre",
+            "precio": 419.00,
+            "descripcionCorta":"Pasa de una aplicación a otra sin apenas tiempo de espera, o cambia rápidamente entre modo de juego, trabajo o búsqueda. No hemos diseñado el OnePlus 6 para batir ningún record. Lo hemos diseñado para que puedas hacer más cosas en menos tiempo.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto4.jpg",
+            "stock": 42,
+            "descuento": 17,
+            "ventas": 19,
+            "paginaProducto": "https://www.pccomponentes.com/oneplus-6-6-64gb-mirror-black-libre"
+        },
+        {
+            "categoria": "PC Sobremesa",
+            "codigo": 5,
+            "nombre": "PcCom Bronze Ryzen 3 2200G/8GB/1TB+120SSD",
+            "precio": 386.92,
+            "descripcionCorta": "Una vez más Pc Componentes sorprende a la industria de la informática con el lanzamiento de los nuevos PcCom, la nueva línea de Pcs de sobremesa para juegos creada tras un amplio trabajo de investigación para ofrecer el mayor rendimiento y optimización en el juego para nuestros clientes. Ensamblados por nuestros expertos de montaje, los nuevos PcCom ofrecen un rendimiento increíble, con máxima velocidad, capacidad de ampliación y un amplio abanico de posibilidades dentro de la gama, en la que podrás elegir el producto óptimo según las necesidades y el tipo de Pc que estas buscando",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto5.jpg",
+            "stock": 100,
+            "descuento": 0,
+            "ventas": 36,
+            "paginaProducto": "https://www.pccomponentes.com/pccom-bronze-ryzen-3-2200g-8gb-1tb-120ssd",
+            
+        },
+        {
+            "categoria": "Laptops",
+            "codigo": 6,
+            "nombre": "HP Pavilion 15-BC450NS Intel Core i5-8300H/8GB/1TB+128GB SSD/GTX 1050/15.6\"",
+            "precio": 699.00,
+            "descripcionCorta": "Prepárese para crear contenidos, disfrutar de sus archivos multimedia y jugar cuanto quiera, porque este ordenador portátil HP Pavilion ha sido diseñado para responder ante cualquier situación. Gracias a un rendimiento excepcional, puede pasar de unas sesiones de transmisión envolventes a editar vídeo sin retardos, y todo ello desde cualquier lugar.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto6.jpg",
+            "stock": 10,
+            "descuento": 0,
+            "ventas": 15,
+            "paginaProducto": "https://www.pccomponentes.com/hp-pavilion-15-bc450ns-intel-core-i5-8300h-8gb-1tb-128gb-ssd-gtx-1050-156",
+        },
+        {
+            "categoria": "TVs",
+            "codigo": 7,
+            "nombre": "Philips 43PUS6503 43\" LED UltraHD 4K",
+            "precio": 335.00,
+            "descripcionCorta": "Disfruta de la claridad de 4K UHD en un Smart TV muy fácil de utilizar. Pixel Precise Ultra HD garantiza que todo tenga un aspecto natural y nítido, mientras que SAPHI te proporciona un acceso instantáneo a tu contenido favorito: las noches de Netflix están a un botón de distancia.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto7.jpg",
+            "stock": 85,
+            "descuento": 16,
+            "ventas": 22,
+            "paginaProducto": "https://www.pccomponentes.com/philips-43pus6503-43-led-ultrahd-4k",
+        },
+        {
+            "categoria": "Laptops",
+            "codigo": 8,
+            "nombre": "Lenovo Ideapad 330-15IGM Intel Celeron N4000/4GB/500GB/15.6\"",
+            "precio": 239.00,
+            "descripcionCorta": "Un portátil no es solo un dispositivo electrónico, sino una inversión. Por eso hemos diseñado el Ideapad 330 con un acabado protector final que lo protege del desgaste. También hemos añadido detalles de goma en la parte inferior de la cubierta para maximizar la ventilación y prolongar la vida útil de los componentes.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto8.jpg",
+            "stock": 47,
+            "descuento": 17,
+            "ventas": 11,
+            "paginaProducto": "https://www.pccomponentes.com/lenovo-ideapad-330-15igm-intel-celeron-n4000-4gb-500gb-156",
+        },
+        {
+            "categoria": "Smarthphones",
+            "codigo": 9,
+            "nombre": "Xiaomi Mi A2 4GB/64GB 4G Dual Sim Negro Libre Xiaomi Mi A2 4GB/64GB 4G Dual Sim Negro Libre",
+            "precio": 199.00,
+            "descripcionCorta": "Xiaomi Mi A2 llega a España y lo hace con grandes novedades. Xiaomi lanza al mercado la nueva versión de sus móviles con Android One, la versión más pura del sistema operativo que entre otras ventajas destaca su fluidez, estabilidad y un ritmo constante de actualizaciones.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto9.jpg",
+            "stock": 78,
+            "descuento": 12,
+            "ventas": 21,
+            "paginaProducto": "https://www.pccomponentes.com/xiaomi-mi-a2-4gb-64gb-4g-dual-sim-negro-libre?__cn_tracker=5c59a8b1c3b5ae1250432b4f",
+        },
+        {
+            "categoria": "Monitores",
+            "codigo": 10,
+            "nombre": "AOC E2470SWH 24\" LED FullHD",
+            "precio": 105.00,
+            "descripcionCorta": "Para casa o el trabajo, esta pantalla AOC E2470SWH ofrece un rendimiento excelente con 16,7 millones de colores y un tiempo de respuesta de 1 ms. Las características inteligentes como el modo Eco o e-Saver te ayudan a reducir sin esfuerzo el consumo de energía.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto10.jpg",
+            "stock": 66,
+            "descuento": 16,
+            "ventas": 14,
+            "paginaProducto": "https://www.pccomponentes.com/aoc-e2470swh-24-led-fullhd?__cn_tracker=5c59a8b1c3b5ae1250432b4f",
+        },
+        {
+            "categoria": "CPU",
+            "codigo": 11,
+            "nombre": "Intel Core i7-8700 3.2Ghz BOX",
+            "precio": 334.90,
+            "descripcionCorta": "Te presentamos el Intel Core i7-8700, un procesador de 8ª Generación, con socket Intel 1151.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto11.jpg",
+            "stock": 89,
+            "descuento": 8,
+            "ventas": 24,
+            "paginaProducto": "https://www.pccomponentes.com/intel-core-i7-8700-32ghz-box?__cn_tracker=5c59a8b1c3b5ae1250432b4f",
+        },
+        {
+            "categoria": "Gráficas",
+            "codigo": 12,
+            "nombre": "Asus GeForce GTX 1060 Expedition OC 6GB GDDR5",
+            "precio": 269.90,
+            "descripcionCorta": "Las tarjetas gráficas ASUS Expedition están fabricadas para una acción sin interrupciones, diseñadas con una durabilidad sin interrupciones para una vida útil de 2X más larga y confiabilidad superior. Incluso probamos las tarjetas hasta los límites, con 144 horas de pruebas de sistema sin disco y comprobaciones exhaustivas de compatibilidad con los mejores juegos. Mientras que el GPU Tweak II con XSplit Gamecaster ofrece una experiencia de juego sin interrupciones y transmisión en tiempo real. están fabricadas para una acción sin interrupciones, diseñadas con una durabilidad sin interrupciones para una vida útil de 2X más larga y confiabilidad superior. Incluso probamos las tarjetas hasta los límites, con 144 horas de pruebas de sistema sin disco y comprobaciones exhaustivas de compatibilidad con los mejores juegos. Mientras que el GPU Tweak II con XSplit Gamecaster ofrece una experiencia de juego sin interrupciones y transmisión en tiempo real.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto12.jpg",
+            "stock": 44,
+            "descuento": 10,
+            "ventas": 10,
+            "paginaProducto": "https://www.pccomponentes.com/asus-geforce-gtx-1060-expedition-oc-6gb-gddr5",
+        },
+        {
+            "categoria": "Gráficas",
+            "codigo": 13,
+            "nombre": "Gigabyte GeForce RTX 2080 Gaming OC 8GB GDDR6",
+            "precio": 799.89,
+            "descripcionCorta": "El nuevo buque insignia de NVIDIA, GeForce® RTX 2080, es la GPU para juegos más avanzada del planeta, impulsada por la arquitectura NVIDIA Turing ™ de alto rendimiento.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto13.jpg",
+            "stock": 74,
+            "descuento": 8,
+            "ventas": 37,
+            "paginaProducto": "https://www.pccomponentes.com/gigabyte-geforce-rtx-2080-gaming-oc-8gb-gddr6",
+        },
+        {
+            "categoria": "Videojuegos",
+            "codigo": 14,
+            "nombre": "Logitech G29 Driving Force para PS4/PS3/PC",
+            "precio": 298.00,
+            "descripcionCorta": "Flípalo con tus juegos de conducción con el volante Logitech G29, un volante compatible con PS4 y PS3 de magnífica construcción ¡Tira millas!",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto14.jpg",
+            "stock": 92,
+            "descuento": 0,
+            "ventas": 19,
+            "paginaProducto": "https://www.pccomponentes.com/logitech-g29-driving-force-para-ps4-ps3-pc",
+        },
+        {
+            "categoria": "RAM",
+            "codigo": 15,
+            "nombre": "G.Skill Trident Z RGB DDR4 3200 PC4-25600 16GB 2x8GB CL16",
+            "precio": 159.00,
+            "descripcionCorta": "La nueva gama de memorias RAM G.Skill Trident Z RGB ofrece soluciones para un rendimiento increíble. Estos kits optimizan el rendimiento de las plataformas de nueva generación, con la ventaja añadida de un alto potencial de overclocking. Además, estas rápidas memorias incorporan un sistema de iluminación LED RGB con hasta 16.8 millones de colores con varios modos de iluminación por software. Simplemente pincha la memoria Trident Z RGB en tu placa basey disfruta de la iluminación.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto15.jpg",
+            "stock": 59,
+            "descuento": 0,
+            "ventas": 5,
+            "paginaProducto": "https://www.pccomponentes.com/gskill-trident-z-rgb-ddr4-3200-pc4-25600-16gb-2x8gb-cl16",
+        },
+        {
+            "categoria": "Monitores",
+            "codigo": 16,
+            "nombre": "AOC I2281FWH 21.5\" IPS",
+            "precio": 99.00,
+            "descripcionCorta": "Te presentamos el AOC I2281FWH con un panel IPS de 21.5 pulgadas, un monitor ulta fino que te ofrece colores brillantes y consistentes desde todos los ángulos.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto16.jpg",
+            "stock": 62,
+            "descuento": 20,
+            "ventas": 5,
+            "paginaProducto": "https://www.pccomponentes.com/aoc-i2281fwh-215-ips",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 17,
+            "nombre": "Xiaomi Redmi 6 3/32GB Dual Sim Negro Libre",
+            "precio": 119.00,
+            "descripcionCorta": "Xiaomi Redmi 6, el rey de la gama baja ahora con cámara dual. Haz fotos sorprendentemente claras con la cámara dual de 12 + 5 MP. Los grandes píxeles de 1,25 um de la cámara principal capturan la belleza de cualquier escena, mientras que el modo retrato con modo belleza e IA desenfoca el fondo para crear retratos increíbles. Además, con el Modo retrato con IA el desenfoque del fondo logra fotos sorprendentes.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto17.jpg",
+            "stock": 81,
+            "descuento": 0,
+            "ventas": 13,
+            "paginaProducto": "https://www.pccomponentes.com/xiaomi-redmi-6-3-32gb-dual-sim-negro-libre",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 18,
+            "nombre": "Xiaomi Redmi 6 3/32GB Dual Sim Azul Libre",
+            "precio": 119.00,
+            "descripcionCorta": "Xiaomi Redmi 6, el rey de la gama baja ahora con cámara dual. Haz fotos sorprendentemente claras con la cámara dual de 12 + 5 MP. Los grandes píxeles de 1,25 um de la cámara principal capturan la belleza de cualquier escena, mientras que el modo retrato con modo belleza e IA desenfoca el fondo para crear retratos increíbles. Además, con el Modo retrato con IA el desenfoque del fondo logra fotos sorprendentes.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto18.jpg",
+            "stock": 69,
+            "descuento": 0,
+            "ventas": 27,
+            "paginaProducto": "https://www.pccomponentes.com/xiaomi-redmi-6-3-32gb-dual-sim-azul-libre",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 19,
+            "nombre": "Xiaomi Redmi Note 6 Pro 4/64Gb Negro Libre",
+            "precio": 219.00,
+            "descripcionCorta": "Xiaomi no para de aumentar su catálogo y ahora nos presenta el nuevo Redmi Note 6 Pro, un smarphone con pantalla de 6.26 Pulgadas, y es que la compañia china está decidida a quedar se con el mercado en la gama media-alta.  Del nuevo Remi Note 6 pro a parte de su pantalla nos trae un procesador Snapdragon 636, batería de 4000mAh y cámara dual con IA.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto19.jpg",
+            "stock": 50,
+            "descuento": 0,
+            "ventas": 41,
+            "paginaProducto": "https://www.pccomponentes.com/xiaomi-redmi-note-6-pro-4-64gb-negro-libre",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 20,
+            "nombre": "Apple iPhone XR 64Gb Azul Libre",
+            "precio": 849.00,
+            "descripcionCorta": "Nueva pantalla Liquid Retina con la tecnología LCD más avanzada del sector. Face ID aún más rápido. El chip más inteligente y con mayor potencia en un smart­phone. Y un revolucio­nario sistema de cámara. Da igual por dónde lo mires: el iPhone XR es sencillamente asombroso.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto20.jpg",
+            "stock": 70,
+            "descuento": 0,
+            "ventas": 15,
+            "paginaProducto": "https://www.pccomponentes.com/apple-iphone-xr-64gb-azul-libre",
+        },
+        {
+            "categoria": "",
+            "codigo": 21,
+            "nombre": "Apple iPhone 7 Plus 128GB Negro Mate Libre",
+            "precio": 727.53,
+            "descripcionCorta": "El iPhone 7 da un paso de gigante en todos y cada uno de los aspectos que hacen del iPhone algo único. Nuevo sistema avanzado de cámaras. El mejor rendimiento y la mayor autonomía que se han visto en un iPhone. Altavoces estéreo. Resistencia al agua y a las salpicaduras.1 Y la pantalla de iPhone más brillante y con más colores hasta la fecha. Es una belleza. Es una bestia. Es el 7.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto21.jpg",
+            "stock": 100,
+            "descuento": 0,
+            "ventas": 0,
+            "paginaProducto": "https://www.pccomponentes.com/apple-iphone-7-plus-128gb-negro-mate-libre-reacondicionado",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 22,
+            "nombre": "Samsung Galaxy J5 2017 Negro Libre",
+            "precio": 159.00,
+            "descripcionCorta": "La mezcla perfecta de estilo y funcionalidad. Diseñado con la máxima atención al detalle, el nuevo Samsung Galaxy J5 2017 tiene un acabado metálico totalmente uniforme y sin protuberancias para ofrecerte el mejor agarre, así como un cristal 2.5D con el que proteger su pantalla HD de 5,2” Super AMOLED.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto22.jpg",
+            "stock": 88,
+            "descuento": 0,
+            "ventas": 12,
+            "paginaProducto": "https://www.pccomponentes.com/samsung-galaxy-j5-2017-negro-libre",
+        },
+        {
+            "categoria": "Smartphones",
+            "codigo": 23,
+            "nombre": "Bq Aquaris U 4G 2GB/16 GB Negro Libre",
+            "precio": 109.00,
+            "descripcionCorta": "Disfruta en tu BQ de lo mejor de Android Nougat. Con la opción multiventana podrás tener dos apps abiertas simultáneamente, el modo luz nocturna reduce la luz azul de la pantalla para ayudarte a descansar y las notificaciones ahora están agrupadas, son más interactivas y puedes responder directamente desde ellas.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto23.jpg",
+            "stock": 72,
+            "descuento": 0,
+            "ventas": 33,
+            "paginaProducto": "https://www.pccomponentes.com/bq-aquaris-u-4g-2gb-16-gb-negro-libre",
+        },
+        {
+            "categoria": "Videojuegos",
+            "codigo": 24,
+            "nombre": "Sony PlayStation 4 Slim 1TB + Call Of Duty Black Ops 4 + Call Of Duty WWII",
+            "precio": 369.00,
+            "descripcionCorta": "Bienvenidos al futuro de los videojuegos con la nueva Playstation 4 Slim con 1TB de almacenamiento. Una PS4 más estilizada y pequeña, pero con la misma potencia de juego que no defrauda a los jugadores.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto24.jpg",
+            "stock": 100,
+            "descuento": 7,
+            "ventas": 25,
+            "paginaProducto": "https://www.pccomponentes.com/sony-playstation-4-slim-1tb-call-of-duty-black-ops-4-call-of-duty-wwii",
+        },
+        {
+            "categoria": "Videojuegos",
+            "codigo": 25,
+            "nombre": "Microsoft Xbox One S 1TB + Minecraft Collection",
+            "precio": 239.00,
+            "descripcionCorta": "Presentamos la nueva Xbox One S. Juega la mejor selección de juegos que existe, incluidos clásicos de Xbox 360, en una consola un 40 % más pequeña, hasta 2 TB de disco duro, con vídeo en 4K de ultra alta definición, función de alto rango dinámico con colores más vivos y luminosos y un mando más ergonómico. No permitas que su tamaño te engañe, la Xbox One S es la Xbox más avanzada que existe.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto25.jpg",
+            "stock": 98,
+            "descuento": 14,
+            "ventas": 14,
+            "paginaProducto": "https://www.pccomponentes.com/microsoft-xbox-one-s-1tb-minecraft-collection",
+        },
+        {
+            "categoria": "Videojuegos",
+            "codigo": 26,
+            "nombre": "Nintendo Switch Azul Neon/Rojo Neon + Indeca Bolsa Slim Mario Calaveritas",
+            "precio": 345.95,
+            "descripcionCorta": "Transporta con seguridad tu Nintendo Switch Azul Neón/Rojo Neón con la bolsa Indeca Slim Mario Calaveritas, con ella no habrá sustos y podrás cargarla en cualquier momento si te quedas sin batería. Tiene bolsillo exterior para que guardes accesorios de la consola o pequeños objetos personales.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto26.jpg",
+            "stock": 76,
+            "descuento": 6,
+            "ventas": 23,
+            "paginaProducto": "https://www.pccomponentes.com/nintendo-switch-azul-neon-rojo-neon-indeca-bolsa-slim-mario-calaveritas",
+        },
+        {
+            "categoria": "CPU",
+            "codigo": 27,
+            "nombre": "Procesador AMD Ryzen 7 2700X 4.3 Ghz",
+            "precio": 345.90,
+            "descripcionCorta": "El nuevo AMD Ryzen 7 2700X pertenece a la nueva serie de procesadores Ryzen 2000, las CPU más potentes y actuales la compañía que suponen un nuevo paso adelante en la magnífica línea iniciada hace un año con la familia Ryzen de procesadores AMD.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto27.jpg",
+            "stock": 63,
+            "descuento": 0,
+            "ventas": 12,
+            "paginaProducto": "https://www.pccomponentes.com/procesador-amd-ryzen-7-2700x-43-ghz",
+        },
+        {
+            "categoria": "CPU",
+            "codigo": 28,
+            "nombre": "Intel Pentium G4560 3.5GHz Box",
+            "precio": 65.99,
+            "descripcionCorta": "Prepárate para más de lo que quieres y necesitas. Los nuevos procesadores Intel® Pentium® te permiten transmitir, compartir, comprar, jugar, crear, consumir... y todo al mismo tiempo.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto28.jpg",
+            "stock": 20,
+            "descuento": 0,
+            "ventas": 52,
+            "paginaProducto": "https://www.pccomponentes.com/intel-pentium-g4560-35ghz-box",
+        },
+        {
+            "categoria": "CPU",
+            "codigo": 29,
+            "nombre": "Intel Core i9-9900K 3.6Ghz",
+            "precio": 589.90,
+            "descripcionCorta": "Sólo compatible con sus placas base basadas en chipset de la serie 300, el procesador Intel Core i9-9900K 3.6 GHz Eight-Core LGA 1151 está diseñado para juegos, creación y productividad.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto29.jpg",
+            "stock": 23,
+            "descuento": 0,
+            "ventas": 24,
+            "paginaProducto": "https://www.pccomponentes.com/intel-core-i9-9900k-36ghz",
+        },
+        {
+            "categoria": "PC Sobremesa",
+            "codigo": 30,
+            "nombre": "PcCom Bronze Intel Pentium G4560/8GB/1TB/GT 1030",
+            "precio": 420.25,
+            "descripcionCorta": "Una vez más Pc Componentes sorprende a la industria de la informática con el lanzamiento de los nuevos PcCom, la nueva línea de Pcs de sobremesa para juegos creada tras un amplio trabajo de investigación para ofrecer el mayor rendimiento y optimización en el juego para nuestros clientes. Ensamblados por nuestros expertos de montaje, los nuevos PcCom ofrecen un rendimiento increíble, con máxima velocidad, capacidad de ampliación y un amplio abanico de posibilidades dentro de la gama, en la que podrás elegir el producto óptimo según las necesidades y el tipo de Pc que estas buscando",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto30.jpg",
+            "stock": 15,
+            "descuento": 12,
+            "ventas": 5,
+            "paginaProducto": "https://www.pccomponentes.com/pccom-bronze-intel-pentium-g4560-8gb-1tb-gt-1030",
+        },
+        {
+            "categoria": "PC Sobremesa",
+            "codigo": 31,
+            "nombre": "PcCom Bronze Essential AMD Ryzen 3 1200/8GB/1TB/GTX 1050",
+            "precio": 490.97,
+            "descripcionCorta": "Una vez más Pc Componentes sorprende a la industria de la informática con el lanzamiento de los nuevos PcCom, la nueva línea de Pcs de sobremesa para juegos creada tras un amplio trabajo de investigación para ofrecer el mayor rendimiento y optimización en el juego para nuestros clientes. Ensamblados por nuestros expertos de montaje, los nuevos PcCom ofrecen un rendimiento increíble, con máxima velocidad, capacidad de ampliación y un amplio abanico de posibilidades dentro de la gama, en la que podrás elegir el producto óptimo según las necesidades y el tipo de Pc que estas buscando",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto31.jpg",
+            "stock": 42,
+            "descuento": 5,
+            "ventas": 31,
+            "paginaProducto": "https://www.pccomponentes.com/pccom-bronze-essential-amd-ryzen-3-1200-8gb-1tb-gtx-1050",
+        },
+        {
+            "categoria": "Discos Duros",
+            "codigo": 32,
+            "nombre": "Samsung SSD 970 EVO NVMe PCI-E M.2 2 TB",
+            "precio": 499.99,
+            "descripcionCorta": "Acelerar en la próxima generación de informática. El Samsung 970 EVO ofrece velocidades revolucionarias, la mejor confiabilidad de su clase y una amplia gama de opciones de capacidad de hasta 2TB *. El último V-NAND, el nuevo controlador Phoenix y la tecnología Intelligent TurboWrite mejoran los juegos de alta gama y la edición gráfica 4K y 3D.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto32.jpg",
+            "stock": 98,
+            "descuento": 0,
+            "ventas": 12,
+            "paginaProducto": "https://www.pccomponentes.com/samsung-ssd-970-evo-nvme-pci-e-m2-2-tb",
+        },
+        {
+            "categoria": "Discos Duros",
+            "codigo": 33,
+            "nombre": "Toshiba OCZ TR200 SSD 480GB SATA3",
+            "precio": 78.99,
+            "descripcionCorta": "Actualizar desde una unidad de disco duro (HDD) debería ser fácil y asequible y es ahí donde entran las SSD OCZ TR200. Diseñada para aumentar la velocidad de su computadora portátil o PC en discos duros convencionales, la Serie TR200 aprovecha la avanzada tecnología 3D BiCS FLASH ™ de 64 capas de Toshiba , para ofrecer un rendimiento equilibrado, fiabilidad y valor que transformará su sistema móvil o de escritorio.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto33.jpg",
+            "stock": 72,
+            "descuento": 11,
+            "ventas": 20,
+            "paginaProducto": "https://www.pccomponentes.com/toshiba-ocz-tr200-ssd-480gb-sata3",
+        },
+        {
+            "categoria": "Discos Duros",
+            "codigo": 34,
+            "nombre": "Seagate Expansión 2.5\" 4TB USB 3.0",
+            "precio": 119.99,
+            "descripcionCorta": "La unidad de disco duro portátil Expansion™ de Seagate® ofrece una solución de fácil uso cuando necesita añadir de forma inmediata más espacio de almacenamiento a su ordenador y llevar consigo sus archivos. La unidad de disco duro portátil Expansion se instala de forma sencilla con solo conectar un cable USB. Podrá empezar a guardar sus archivos digitales en esta unidad de disco duro externa desde el primer instante.",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto34.jpg",
+            "stock": 58,
+            "descuento": 0,
+            "ventas": 10,
+            "paginaProducto": "https://www.pccomponentes.com/seagate-expansion-25-4tb-usb-30",
+        },
+        {
+            "categoria": "Discos Duros",
+            "codigo": 35,
+            "nombre": "Toshiba HDD 500GB 5400RPM SATA3",
+            "precio": 48.59,
+            "descripcionCorta": "Los discos duros de Toshiba( hdd) combinan un rendimiento con una gran capacidad de disco duro . La serie 7.0mm MQ01ABFxxx ofrece 500 GB de capacidad de almacenamiento",
+            "descripcionLarga": "",
+            "imagenURL": "img/productos/producto35.jpg",
+            "stock": 100,
+            "descuento": 2,
+            "ventas": 55,
+            "paginaProducto": "https://www.pccomponentes.com/toshiba-hdd-500gb-5400rpm-sata3",
+        }
+
+    ];

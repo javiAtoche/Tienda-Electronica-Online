@@ -1,0 +1,34 @@
+productos = [
+    {
+        "codigo": 1,
+        "nombre":"CHALET01",
+        "precio": 30,
+        "descripcion":"expremidor de brazo",
+        "imagenUrl":"img/chalet01.jpg",
+    },
+     
+    {
+        "codigo": 2,
+        "nombre":"CHALET02",
+        "precio": 15,
+        "descripcion":"batidora de brazo",
+        "imagenUrl":"img/chalet02.jpg",
+    },
+
+    {
+        "codigo": 3,
+        "nombre":"CHALET03",
+        "precio": 30,
+        "descripcion":"cafetera doble",
+        "imagenUrl":"img/chalet03.jpg",
+    },
+
+    {
+        "codigo": 4,
+        "nombre":"CHALET04",
+        "precio": 500,
+        "descripcion":"frogorifico gris",
+        "imagenUrl":"img/chalet04.jpg",
+    },
+
+]
