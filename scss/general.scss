@@ -138,6 +138,8 @@ select{
 //clase que representa la fila de botones del carrito donde apareceran botones como 'ir al carro', 'comprar'
 .fila-btn-carrito{
     width: 100%;
+    // arreglo para que en chrome los botones se mantengan igual de grandes y no se salgan del cuadro del carrito
+    min-height: 4rem;
 }
 
 

@@ -63,6 +63,9 @@ window.addEventListener('load',() =>{
 
     // EVENTO 'CLICK' COLLAPSE DE ICONO CARRITO
     _clickCollapseCarrito();
+
+    // CARGA EL CARRITO DESDE EL LOCALSTORAGE
+    _cargaCarritoFromLocalStorage();
     
     // EVENTO 'CLICK' ICONO ELIMINAR PRODUCTO DE CARRITO
     _clickEliminarProductoDeCarrito();
@@ -131,6 +134,18 @@ function _clickBusqueda(){
 /**********************************************
 * CARRITO DE COMPRA
 * ********************************************/
+// CARGA CARRITO: Carga el carrito con los productos que hubiera en el localStorage
+function _cargaCarritoFromLocalStorage(){
+    let l_idProducto = null;
+
+    for(let i = 0; i<=localStorage.length ; i++){
+        l_idProducto = localStorage.key(i);
+        if(l_idProducto != null){
+            _anyadirProductoACarrito(l_idProducto);
+        }
+    }
+}
+
 //ICONO CARRITO: Evento 'click' cuando se pulsa el icono de carrito
 function _clickCollapseCarrito(){
     g_carritoLink.addEventListener('click',()=>
@@ -149,7 +164,12 @@ function _clickEliminarProductoDeCarrito(){
 
 // FUNCION ELIMINA PRODUCTO DE CARRITO: elimina un producto del carrito dado el envoltorio de ese producto
 function _eliminarProductoDeCarrito(p_productoAEliminar){
+    //elimina el elemento del carrito
     _removeElementInDom(g_cajaProductosCarrito,p_productoAEliminar);
+
+    //elimina el id de producto del localStorage para que no se vuelva a dibujar en el carrito si cambiamos de pagina
+    localStorage.removeItem(p_productoAEliminar.id);
+
 }
 
 
@@ -180,7 +200,11 @@ function _anyadirProductoACarrito(p_idProducto){
     let l_foundProduct = _buscarProductoXCodigo(p_idProducto);
 
     if( l_foundProduct != null){
+        // anyade el elemento al carrito
         _addElementInDom(g_cajaProductosCarrito,_plantillaElementCarrito(l_foundProduct),c_BEFOREEND);
+
+        // anyade el id de producto al localStorage para poder recuperarlo en cualquier pagina aunque se recargue
+        localStorage.setItem(p_idProducto,p_idProducto);
     }
 }
 
@@ -224,7 +248,7 @@ function _plantillaElementCarrito(p_prod){
     let l_plantillaCar =
     `
     <!-- fila i -->
-    <div class="fila-producto-carrito d-flex p-2">
+    <div id="${p_prod.codigo}" class="fila-producto-carrito d-flex p-2">
       <!-- col 1 -->
       <div class="col1-carrito col-2 d-flex justify-content-center align-items-center p-2">
         <img src="${p_prod.imagenURL}" alt="producto1" class="img-fit ">

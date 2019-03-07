@@ -30634,6 +30634,7 @@ select {
 
 .fila-btn-carrito {
   width: 100%;
+  min-height: 4rem;
 }
 
 div#info-header-div > i {
