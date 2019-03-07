@@ -103,8 +103,12 @@ window.addEventListener('load',() =>{
 
 // FUNCION CARGA DATOS BUSQUEDA ANTERIOR
 function _cargaDatosBusquedaAnterior(){
-    document.querySelector("#select-categorias").value = window.localStorage.getItem(c_CATEGORIA);
-    document.querySelector("#input-search").value = window.localStorage.getItem(c_BUSQUEDA);
+    g_valorCategoria = window.localStorage.getItem(c_CATEGORIA);
+    g_valorCategoria = (g_valorCategoria == null) ? c_NOFILTERCATEG : g_valorCategoria ;
+    g_valorBusqueda = window.localStorage.getItem(c_BUSQUEDA);
+    g_valorBusqueda = (g_valorBusqueda == null) ? '' : g_valorBusqueda;
+    document.querySelector("#select-categorias").value = g_valorCategoria;
+    document.querySelector("#input-search").value = g_valorBusqueda;
 }
 
 // MUESTRA NUMERO DE PRODUCTOS MOSTRADOS / NUMERO DE PRODUCTOS TOTAL EN LA BUSQUEDA
@@ -142,7 +146,9 @@ function _calculaYMuestraBusqueda(p_padreCajaPaginas,p_sectionElementos, p_array
 
         // recogemos el valor en las variables de categoria y busqueda
         g_valorCategoria = window.localStorage.getItem(c_CATEGORIA);
+        g_valorCategoria = (g_valorCategoria == null) ? 'Categorias' : g_valorCategoria;
         g_valorBusqueda = window.localStorage.getItem(c_BUSQUEDA);
+        g_valorBusqueda = (g_valorBusqueda == null) ? '' : g_valorBusqueda;
 
         //recupera todos los productos que cumplen el filtro de busqueda
         g_arrayProdFiltrados = _recuperaProductosFiltrados(p_arrayElementosTotales,g_valorCategoria, g_valorBusqueda);

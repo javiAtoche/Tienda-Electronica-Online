@@ -204,10 +204,18 @@ function _verDetalleProducto(p_idProducto){
 // CATEGORIAS
 function _plantillaElementCateg(p_categoria){
     // <option class="bg-dark text-dark" value="${categorias.indexOf(`${categoria}`)}">${categoria}</option>
-    let l_plantillaCategoria =
-    `
-    <option class="bg-dark text-light">${p_categoria}</option>
-    `;
+    let l_plantillaCategoria = '';
+    if(p_categoria.toLowerCase() == 'Categorias'.toLowerCase()){
+        l_plantillaCategoria =
+        `
+        <option class="bg-dark text-light" selected>${p_categoria}</option>
+        `;
+    }else{
+        l_plantillaCategoria =
+        `
+        <option class="bg-dark text-light">${p_categoria}</option>
+        `;
+    }
     return l_plantillaCategoria;
 }
 
