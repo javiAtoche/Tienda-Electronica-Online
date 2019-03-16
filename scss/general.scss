@@ -282,3 +282,83 @@ a.activeNumPage{
     // background-blend-mode: overlay;
     
 }
+
+
+/* FOOTER */
+footer{
+
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-around;
+
+
+    background-color: $dark;
+}
+
+footer > div{
+ display: flex;
+ flex-direction: column;
+//  flex-wrap: wrap;
+//  flex-basis: 33%;
+flex: 0 1 30%;
+}
+
+footer > div.quienesSomos > a{
+    @extend .text-amarilloWarning;
+}
+footer > div.quienesSomos > a:hover{
+    @extend .text-amarilloWarning;
+    opacity: 0.7;
+}
+footer > div.quienesSomos > a::before{
+    content: '- ';
+}
+
+footer > div.redesSociales, footer > div.contacto{
+    align-items: center;
+}
+
+footer > div > h5{
+    align-self: center;
+}
+
+.email{
+    @extend .text-rojoDanger;
+}
+.email:hover{
+    @extend .text-rojoDanger;
+    opacity: 0.7;
+}
+
+.whatsapp{
+    @extend .text-verdeSuccess;
+}
+.whatsapp:hover{
+    @extend .text-verdeSuccess;
+    opacity: 0.7;
+}
+
+.linkedin{
+    @extend .text-azulLinkedin;
+}
+.linkedin:hover{
+    @extend .text-azulLinkedin;
+    opacity: 0.7;
+}
+
+.twitter{
+    @extend .text-azulTwitter;
+}
+.twitter:hover{
+    @extend .text-azulTwitter;
+    opacity: 0.7;
+}
+
+.facebook{
+    @extend .text-azulFacebook;
+}
+.facebook:hover{
+    @extend .text-azulFacebook;
+    opacity: 0.7;
+}

@@ -114,13 +114,13 @@ function _clickBusqueda(){
        window.localStorage.setItem(c_CATEGORIA,document.querySelector("#select-categorias").value);
        window.localStorage.setItem(c_BUSQUEDA,document.querySelector("#input-search").value);
 
-        if(window.location.href.includes("consulta.html")){
-            // recargar "consulta.html"
+        if(window.location.href.includes("consulta.php")){
+            // recargar "consulta.php"
              window.location.reload();
         }else{
             
-            // ir a pagina "consulta.html"
-            window.open("consulta.html","_self");
+            // ir a pagina "consulta.php"
+            window.open("consulta.php","_self");
 
         }
    });
@@ -213,7 +213,7 @@ function _verDetalleProducto(p_idProducto){
     //guarda id de producto, para recuperarlo en la pagina del producto cuando esta cargue, y asi cargar el producto deseado
     window.localStorage.setItem(c_CODIGO_PRODUCTO,p_idProducto);
 
-    window.open("detalle_producto.html", "_self");
+    window.open("detalle_producto.php", "_self");
 }
 
 

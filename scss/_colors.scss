@@ -4,6 +4,9 @@
 $azulPrimary: #007bff;
 $azulElectronBlue: #0984e3;
 $azulBelizeHole: #2980b9;
+$azulLinkedin: #0077B5;
+$azulTwitter: #1DA1F2;
+$azulFacebook: #32508E;
 $azulMidnightBlue: #2c3e50;
 $azulDeepKoamaru: #30336b;
 $azulCoastalBreeze: #dff9fb;
@@ -97,6 +100,16 @@ $grisSecondaryExtraSoft: #e8e8e8;
 
     .text-azulDeepKoamaru{
         color: $azulDeepKoamaru !important;
+    }
+
+    .text-azulLinkedin{
+        color: $azulLinkedin !important;
+    }
+    .text-azulTwitter{
+        color: $azulTwitter !important;
+    }
+    .text-azulFacebook{
+        color: $azulFacebook !important;
     }
 
     // verde

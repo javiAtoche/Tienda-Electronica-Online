@@ -61,7 +61,7 @@ window.addEventListener('load',() =>{
 
     
 
-    // FUNCION CARGA DATOS BUSQUEDA ANTERIOR: Mantiene los datos de la busqueda que hemos realizado, de manera que no se pierdan al pasar de una pagina a consulta.html
+    // FUNCION CARGA DATOS BUSQUEDA ANTERIOR: Mantiene los datos de la busqueda que hemos realizado, de manera que no se pierdan al pasar de una pagina a consulta.php
     _cargaDatosBusquedaAnterior();
 
     // ANYADE PRODUCTOS FILTRADOS POR CONSULTA
@@ -69,7 +69,7 @@ window.addEventListener('load',() =>{
     _clickBusqueda();
 
 
-    // REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.HTML'
+    // REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.php'
     _calculaYMuestraBusqueda(g_padreCajaPaginas,g_sectionConsulta, productos,g_selectNumProdMostradosXPagina.value,...g_paginadorTipo1);
 
     // ANYADE PRODUCTOS AL CARRITO O VER DETALLES DEL PRODUCTO
@@ -141,7 +141,7 @@ function _clickSelectNumProdMostradosXPagina(p_paginador){
 ********   MAIN SECCION PRODUCTOS    ********
 *********************************************/
 
-// REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.HTML'
+// REALIZA TODAS LAS FUNCIONES DE LA BUSQUEDA MOSTRANDO EL RESULTADO EN LA PAGINA 'CONSULTA.php'
 function _calculaYMuestraBusqueda(p_padreCajaPaginas,p_sectionElementos, p_arrayElementosTotales,p_selectNumProdMostradosXPaginaValue,...p_paginadorTipo1){
 
         // recogemos el valor en las variables de categoria y busqueda
