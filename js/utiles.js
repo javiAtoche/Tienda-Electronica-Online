@@ -48,11 +48,11 @@ function _filtraProductosXCategoria(p_prodConsulta,p_valorSelectCateg, p_valorIn
 
         l_productoFiltrado = p_prodConsulta;
 
-    }else if(p_prodConsulta.nombre.toLowerCase().includes(p_valorInputSearch)  && p_valorSelectCateg.toLowerCase() == c_NOFILTERCATEG.toLowerCase()){
+    }else if(p_prodConsulta.nombre.toLowerCase().includes(p_valorInputSearch.toLowerCase())  && p_valorSelectCateg.toLowerCase() == c_NOFILTERCATEG.toLowerCase()){
 
         l_productoFiltrado = p_prodConsulta;
 
-    }else if(p_prodConsulta.categoria.toLowerCase() == p_valorSelectCateg.toLowerCase() && p_prodConsulta.nombre.toLowerCase().includes(p_valorInputSearch) ){
+    }else if(p_prodConsulta.categoria.toLowerCase() == p_valorSelectCateg.toLowerCase() && p_prodConsulta.nombre.toLowerCase().includes(p_valorInputSearch.toLowerCase()) ){
 
         l_productoFiltrado = p_prodConsulta;
 

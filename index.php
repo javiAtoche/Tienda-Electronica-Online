@@ -33,7 +33,7 @@
 <div id="div-principal" class="">
 
   <!-- incluye la cabecera, que sera igual en todas las paginas -->
-   <?php include_once ("includes/templates/header.php"); ?>
+   <?php include_once("includes/templates/header.php"); ?>
 
     <!-- MAIN -->
     <main>
